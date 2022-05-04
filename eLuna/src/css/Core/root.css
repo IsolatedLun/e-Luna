@@ -1,0 +1,12 @@
+:root {
+    /* Main Colors */
+    --clr-background: hsl(218 5% 15%);
+    --clr-foreground: white;
+
+    /* Navbar */
+    --clr-nav-background: hsl(218 11% 9%);
+
+        /* Units */
+        --nav-height: 3.5rem;
+        --nav-spacing: 1em;
+}

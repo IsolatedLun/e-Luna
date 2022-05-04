@@ -1,0 +1,27 @@
+{
+  "name": "eluna",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "postcss-run": "postcss ./src/css/imports.css --dir public --watch"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "autoprefixer": "^10.4.7",
+    "cssnano": "^5.1.7",
+    "postcss": "^8.4.13",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.1.0",
+    "postcss-preset-env": "^7.5.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.7"
+  }
+}
