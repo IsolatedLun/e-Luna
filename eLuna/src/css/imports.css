@@ -2,8 +2,18 @@
 @import url('./Core/root.css');
 @import url('./Core/resets.css');
 
+@import url('./Utils/fonts.css');
+
+/* Compositions */
+@import url('./Compositions/hoverable.css');
+
 /* Utilities */
 @import url('./Utils/layouts.css');
+@import url('./Utils/misc.css');
+@import url('./Utils/margins-paddings.css');
 
 /* Components */
 @import url('./Components/Navbar/navbar.css');
+@import url('./Components/Interactibles/Buttons/button.css');
+@import url('./Components/Interactibles/Buttons/icon.css');
+@import url('./Components/Interactibles/Dropdown/dropdown.css');

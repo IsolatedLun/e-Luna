@@ -1,12 +1,39 @@
 :root {
     /* Main Colors */
-    --clr-background: hsl(218 5% 15%);
+    --clr-background: hsl(222 2% 8%);
     --clr-foreground: white;
 
+    --clr-hover: hsl(0 0% 50% / 0.36);
+
+        /* Speeds */
+        --speed: 95ms;
+
+    /* Font sizes */
+    --fs-200: calc(var(--fs-400) * 0.8);
+    --fs-300: calc(var(--fs-400) * 0.9);
+    --fs-400: 1rem;
+    --fs-450: calc(var(--fs-400) * 1.10);
+    --fs-500: calc(var(--fs-400) * 1.25);
+    --fs-600: calc(var(--fs-400) * 1.5);
+    --fs-700: calc(var(--fs-400) * 1.75);
+
     /* Navbar */
-    --clr-nav-background: hsl(218 11% 9%);
+    --clr-nav-background: hsl(222 2% 14%);
 
         /* Units */
         --nav-height: 3.5rem;
         --nav-spacing: 1em;
+
+    /* Dropdown */
+    --clr-dropdown-background: hsl(218 2% 16%);
+    --shadow-dropdown: 0 0 4px 4px rgba(0 0 0 / 0.26);
+
+        /* Units */
+        --dropdown-spacing: 0.5em;
+        --dropdown-width: 260px;
+        --speed-dropdown: 195ms;
+
+    /* Icon */
+        /* Units */
+        --icon-spacing: 0.65em;
 }

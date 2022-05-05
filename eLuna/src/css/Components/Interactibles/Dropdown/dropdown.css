@@ -1,0 +1,52 @@
+.dropdown {
+    --_left: var(--dropdown-left, -900%);
+    --_bottom: var(--dropdown-bottom, 0.1rem);
+
+    width: 100%;
+    max-width: var(--dropdown-width);
+
+    background-color: var(--clr-dropdown-background);
+    padding: calc(var(--dropdown-spacing) * 0.5) var(--dropdown-spacing);
+    border-radius: var(--border-dropdown-radius, 8px);
+    overflow: hidden;
+    box-shadow: var(--shadow-dropdown);
+
+    transform: translateX(-80%);
+}
+
+.dropdown .dropdown-item {
+    padding: calc(var(--dropdown-spacing) * 0.75) var(--dropdown-spacing);
+    background-color: var(--_background, transparent);
+    white-space: nowrap;
+}
+
+/* Menu Animations */
+.menu {
+    transform-origin: center;
+    transition: transform var(--speed-dropdown) ease-in-out;
+}
+
+.menu-primary-enter {
+    transform: translateX(110%) scaleY(0);
+}
+
+.menu-primary-enter-active {
+    transform: translateX(0%) scaleY(1);
+}
+
+.menu-primary-exit-active {
+    transform: translateX(110%) scaleY(0);
+}
+
+/* Secondary */
+.menu-secondary-enter {
+    transform: translateX(0%) scaleY(0);
+}
+
+.menu-secondary-enter-active {
+    transform: translateX(0%) scaleY(1);
+}
+
+.menu-secondary-exit-active {
+    transform: translateX(110%);
+}

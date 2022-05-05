@@ -1,0 +1,10 @@
+.icon {
+    font-family: 'Font Awesome 5 Free';
+}
+
+.icon:not([data-variant]) {
+    padding: var(--icon-spacing);
+
+    background-color: var(--clr-hover);
+    border-radius: var(--border-icon-radius, 50%);
+}

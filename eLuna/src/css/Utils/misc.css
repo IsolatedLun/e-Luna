@@ -1,0 +1,44 @@
+/* Positions */
+.pos-relative {
+    position: relative;
+}
+
+.pos-absolute {
+    position: absolute;
+}
+
+.pos-fixed {
+    position: fixed;
+}
+
+/* Overflows */
+.overflow {
+    overflow: hidden;
+}
+
+/* Displays */
+.display-block {
+    display: block;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+/* Borders */
+.border-radius-inherit {
+    border-radius: inherit;
+}
+
+.border-radius-50pct {
+    border-radius: 50%;
+}
+
+/* Cursors */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-muted {
+    color: hsl(0 0% 76%);
+}

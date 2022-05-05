@@ -1,0 +1,7 @@
+.hoverable {
+    transition: background-color var(--speed) ease-in-out;
+}
+
+.hoverable:is(:hover, :focus) {
+    --_background: var(--clr-hover);
+}

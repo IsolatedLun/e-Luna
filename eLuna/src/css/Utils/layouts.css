@@ -10,3 +10,21 @@
 .flex-align-center {
     align-items: center;
 }
+
+.flex-justify-between {
+    justify-content: space-between;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+/* Gaps */
+.gap-025 {
+    gap: 0.25em;
+}
+
+.gap-05 {
+    gap: 0.5em;
+}

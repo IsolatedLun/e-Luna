@@ -1,4 +1,4 @@
-nav {
+.main-nav {
     background-color: var(--clr-nav-background);
     padding: calc(var(--nav-spacing) * 0.5) var(--nav-spacing);
     height: var(--nav-height);

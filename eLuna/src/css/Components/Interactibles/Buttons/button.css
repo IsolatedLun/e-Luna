@@ -1,0 +1,23 @@
+.button {
+    padding: var(
+        --_button-spacing, 
+        calc(var(--button-spacing) * 0.5) var(--button-spacing)
+        );
+
+    background-color: var(--_background, --clr-button-background);
+    border: var(--_border-button, none);
+}
+
+.button[data-variant='icon'] {
+    --_background: var(--clr-hover);
+    --_button-spacing: 0.45em;
+
+    font-size: var(--fs-500);
+    width: 40px;
+    height: auto;
+    transition: filter var(--speed) ease-in-out;
+}
+
+.button[data-variant='icon']:is(:hover, :focus) {
+    filter: brightness(1.2);
+}
