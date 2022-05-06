@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Dropdown from '../Interactibles/Dropdown/Dropdown'
-import DropdownItem from '../Interactibles/Dropdown/DropdownItem'
-import NavItem from './Navigation/NavItem'
+import Dropdown from '../../Interactibles/Dropdown/Dropdown'
+import DropdownItem from '../../Interactibles/Dropdown/DropdownItem'
+import NavItem from './NavItem'
 import { CSSTransition } from 'react-transition-group'
-import { ARROW_LEFT, ARROW_RIGHT, GEAR_ICON, PLUS_ICON } from '../../consts'
+import { ARROW_LEFT, ARROW_RIGHT, GEAR_ICON, PLUS_ICON } from '../../../consts'
 
 const NavbarDropdown = () => {
     const [active, setActive] = useState('main');

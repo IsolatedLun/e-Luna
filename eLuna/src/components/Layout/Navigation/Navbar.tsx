@@ -1,6 +1,6 @@
 import { CART_ICON } from '../../../consts'
 import IconButton from '../../Interactibles/Buttons/IconButton'
-import NavbarDropdown from '../NavbarDropdown'
+import NavbarDropdown from './NavbarDropdown'
 
 const Navbar = () => {
   return (
@@ -9,7 +9,7 @@ const Navbar = () => {
 
         <ul className="[ nav-list ] [ flex gap-05 ]">
           <NavbarDropdown />
-          <IconButton ariaLabel='Shopping cart icon' onClick={() => null}>
+          <IconButton ariaLabel='Shopping cart icon' class='[ border-radius-50pct ]'>
             { CART_ICON }
           </IconButton>
         </ul>

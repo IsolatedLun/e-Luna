@@ -6,3 +6,12 @@
 .margin-right-auto {
     margin-right: auto;
 }
+
+.margin-top-05rem {
+    margin-top: 0.5rem
+}
+
+/* Margins [Logical] */
+.margin-block-1rem {
+    margin-block: 1rem;
+}

@@ -1,0 +1,23 @@
+.card:is([data-variant='product'], [data-contains-single='false']) img {
+    width: var(--card-image-size-small);
+    background-color: var(--clr-hover);
+    border-radius: var(--_img-border, 5px);
+}
+
+.card:is([data-variant='product'], [data-contains-single='true']) img {
+    width: var(--card-image-size-big);
+}
+
+.card .card__img-grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card[data-contains-single='true'] .card__img-grid {
+    grid-template-columns: 1fr;
+}
+
+.card[data-variant='product'] .card__title.text-ellipsis {
+    --_max-width: 16ch;
+}

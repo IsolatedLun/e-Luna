@@ -1,40 +1,68 @@
 import React, { useEffect, useState } from 'react'
+import { CARET_LEFT, CARET_RIGHT } from '../../../consts';
+import IconButton from '../Buttons/IconButton';
 
-let transitionTimeout: NodeJS.Timeout;
 let transitionInterval: NodeJS.Timer;
 const ImageSlider = ({ imgUrls, alt } : { imgUrls: string[], alt: string }) => {
     const [idx, setIdx] = useState(0);
     const imgRef = React.createRef<HTMLImageElement>();
 
-    function handleClick() {
-        if(idx + 2 > imgUrls.length)
-            setIdx(0);
-        else
-            setIdx(idx + 1);
+    function handleClick(n: number) {
+        toggleImage();
+
+        setTimeout(() => {
+            if(n === -1 && idx - 1 < 0)
+                setIdx(imgUrls.length - 1);
+            else if (idx + 1 > imgUrls.length - 1)
+                setIdx(0);
+            else
+                setIdx(idx + 1);
+        }, 200)
     }
 
-    useEffect(() => { // Like the CSS Transition but more specific
+    function toggleImage() {
         imgRef.current?.classList.remove('image-enter');
         imgRef.current?.classList.add('image-exit');
 
-        transitionTimeout = setTimeout(() => {
+        setTimeout(() => {
             imgRef.current?.classList.remove('image-exit');
             imgRef.current?.classList.add('image-enter');
         }, 200)
+    }
 
-    }, [idx])
 
     useEffect(() => {
         transitionInterval = setInterval(() => {
-            handleClick();
+            handleClick(1);
         }, 5000)
 
         return () => { clearInterval(transitionInterval) };
     }, [])
 
     return (
-        <div className='[ image-slider ]' onClick={() => handleClick()}>
-            <img ref={imgRef} className='[ image-slider__img ]' src={imgUrls[idx]} alt={alt} />
+        <div className='[ image-slider ] [ pos-relative ]'>
+            <IconButton 
+                ariaLabel='Left' 
+                class='[ slider__button pos-absolute ]'
+                onClick={() => handleClick(-1)}
+                >
+                { CARET_LEFT }
+            </IconButton>
+
+            <img 
+                ref={imgRef} 
+                data-testid='slider-img' 
+                className='[ image-slider__img ]' 
+                src={imgUrls[idx]} 
+                alt={alt} />
+
+            <IconButton 
+                ariaLabel='Right' 
+                class='[ slider__button pos-absolute ]'
+                onClick={() => handleClick(1)}
+                >
+                { CARET_RIGHT }
+            </IconButton>
         </div>
     )
 }

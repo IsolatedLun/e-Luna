@@ -6,6 +6,7 @@
 
 /* Compositions */
 @import url('./Compositions/hoverable.css');
+@import url('./Compositions/typography.css');
 
 /* Utilities */
 @import url('./Utils/layouts.css');
@@ -13,8 +14,15 @@
 @import url('./Utils/margins-paddings.css');
 
 /* Components */
+@import url('./Core/main.css');
+
 @import url('./Components/Navbar/navbar.css');
+@import url('./Components/Home/home.css');
+
 @import url('./Components/Interactibles/Buttons/button.css');
 @import url('./Components/Interactibles/Buttons/icon.css');
 @import url('./Components/Interactibles/Dropdown/dropdown.css');
 @import url('./Components/Interactibles/ImageSlider/image-slider.css');
+
+@import url('./Components/Modules/Card/card.css');
+@import url('./Components/Modules/Card/product-card.css');

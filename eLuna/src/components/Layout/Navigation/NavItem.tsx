@@ -7,7 +7,11 @@ const NavItem = (props: INF_NavItem) => {
 
   return (
     <li className='[ nav-item ]'>
-        <IconButton ariaLabel={props.ariaLabel} onClick={() => setOpen(!isOpen)}>
+        <IconButton 
+          ariaLabel={props.ariaLabel} 
+          class='[ border-radius-50pct ]' 
+          onClick={() => setOpen(!isOpen)}
+          >
             { props.icon }
         </IconButton>
 

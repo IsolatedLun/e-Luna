@@ -1,13 +1,13 @@
 import React from 'react'
 import { INF_IconButton } from './types'
 
-const IconButton = (props: INF_IconButton<HTMLButtonElement>) => {
+const IconButton = (props: INF_IconButton) => {
   return (
     <button
       onClick={props?.onClick}
       aria-hidden
       aria-label={props.ariaLabel}
-      className='[ button ] [ icon fw-bold fs-450 border-radius-50pct display-block ]'
+      className={`[ button icon fw-bold ] ${props.class}`}
       data-variant='icon'
     >
       { props.children }

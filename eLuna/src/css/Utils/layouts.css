@@ -20,6 +20,15 @@
     justify-content: center;
 }
 
+/* Grid */
+[class*='grid'] {
+    display: grid;
+}
+
+.grid-auto-columns {
+    grid-template-columns: repeat(5, 1fr);
+}
+
 /* Gaps */
 .gap-025 {
     gap: 0.25em;

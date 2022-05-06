@@ -1,4 +1,6 @@
 .button {
+    --_background: var(--clr-button-background);
+
     padding: var(
         --_button-spacing, 
         calc(var(--button-spacing) * 0.5) var(--button-spacing)

@@ -5,6 +5,8 @@
 
     --clr-hover: hsl(0 0% 50% / 0.36);
 
+    --clr-muted: hsl(0 0% 76%);
+
         /* Speeds */
         --speed: 95ms;
 
@@ -23,6 +25,23 @@
         /* Units */
         --nav-height: 3.5rem;
         --nav-spacing: 1em;
+
+    /* Home */
+    --home-showcase-height: 24rem;
+
+    /* Card */
+    --clr-card-background: hsl(218 2% 20%);
+
+        /* Product Card */
+            /* Units */
+            --card-image-size-small: 7rem;
+            --card-image-size-big: 9rem;
+
+    /* Buttons */
+    --clr-button-background: rgba(0 0 0 / 0.26);
+
+        /* Units */
+        --button-spacing: 0.75em;
 
     /* Dropdown */
     --clr-dropdown-background: hsl(218 2% 16%);
