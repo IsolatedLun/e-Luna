@@ -1,0 +1,20 @@
+.tooltip-container .tooltip__icon:is(:hover, :focus) + *,
+.tooltip:is(:hover, :focus-within) {
+    visibility: visible;
+}
+
+.tooltip {
+    visibility: hidden;
+    max-width: var(--tooltip-max-width);
+    max-height: calc(var(--tooltip-max-width) / 2);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    top: 90%;
+}
+
+.card[data-variant='tooltip'] {
+    background-color: var(--clr-card-tooltip-background);
+    border: 2px solid var(--clr-hover);
+}

@@ -1,3 +1,4 @@
+/* Stars */
 .star-rating .star:hover,
 .star-rating .star:hover ~ .star,
 .star-rating .star[data-variant='selected'],
@@ -28,4 +29,24 @@
 
 .star-rating .star[data-variant='selected']::before {
     transform: translate(-50%, -0.75rem);
+}
+
+/* Rating bar */
+.star-rating .rating__bar {
+    padding: var(--rating-bar-spacing);
+    width: calc(var(--tooltip-max-width) / 2);
+
+    border: 1px solid var(--clr-hover);
+    border-radius: var(--_rating-bar-border, 6px);
+}
+
+.star-rating .rating__bar::after {
+    content: '';
+    position: absolute;
+
+    background-color: var(--clr-star, gold);
+
+    inset: 0;
+    transform: scaleX(var(--_scale-pct, 0));
+    transform-origin: left;
 }

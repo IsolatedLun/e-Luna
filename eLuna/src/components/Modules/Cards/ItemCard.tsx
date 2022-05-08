@@ -18,7 +18,15 @@ const ItemCard = () => {
             
             <div className='[ flex flex-justify-between flex-align-center ]'>
               <p className='[ fs-300 text-muted ]'>Seller: <a href="">joe biden</a></p>
-              <StarRating />
+              <StarRating 
+                rating={5} 
+                _5_stars={0} 
+                _4_stars={0} 
+                _3_stars={0}
+                _2_stars={0}
+                _1_stars={0}
+                isViewOnly={true}
+              />
             </div>
       </div>
     </div>

@@ -11,6 +11,7 @@
         --speed: 95ms;
 
     /* Font sizes */
+    --fs-100: calc(var(--fs-400) * 0.7);
     --fs-200: calc(var(--fs-400) * 0.8);
     --fs-300: calc(var(--fs-400) * 0.9);
     --fs-400: 1rem;
@@ -31,6 +32,7 @@
 
     /* Card */
     --clr-card-background: hsl(218 2% 20%);
+    --clr-card-tooltip-background: hsl(218 2% 14%);
 
         /* Product Card */
             /* Units */
@@ -38,6 +40,14 @@
             
             --card-image-size-small: 7rem;
             --card-image-size-big: 9rem;
+    
+    /* Tooltip */
+        /* Units */
+        --tooltip-max-width: 512px;
+
+    /* Star Rating */
+        /* Units */
+        --rating-bar-spacing: 0.75em;
 
     /* Buttons */
     --clr-button-background: rgba(0 0 0 / 0.26);

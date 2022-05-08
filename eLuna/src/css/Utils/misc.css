@@ -12,8 +12,12 @@
 }
 
 /* Overflows */
-.overflow {
+.overflow-hidden {
     overflow: hidden;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
 }
 
 /* Displays */
@@ -60,6 +64,10 @@
     text-align: center;
 }
 
+.white-space-nowrap {
+    white-space: nowrap;
+}
+
 /* Widths & Heights */
 .width-100pct {
     width: 100%;
@@ -67,4 +75,9 @@
 
 .height-100pct {
     height: 100%;
+}
+
+/* Insets */
+.inset-all {
+    inset: 0;
 }
