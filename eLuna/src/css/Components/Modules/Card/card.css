@@ -1,6 +1,11 @@
 .card {
     background-color: var(--clr-card-background);
-    padding: 0.5em;
+    padding: var(--_card-spacing, --card-spacing);
 
     border-radius: var(--_card-border, 6px);
+}
+
+.card img {
+    background-color: var(--clr-hover);
+    border-radius: var(--_img-border, 5px);
 }

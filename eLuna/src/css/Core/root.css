@@ -34,6 +34,8 @@
 
         /* Product Card */
             /* Units */
+            --card-spacing: 0.45em;
+            
             --card-image-size-small: 7rem;
             --card-image-size-big: 9rem;
 
@@ -51,6 +53,9 @@
         --dropdown-spacing: 0.5em;
         --dropdown-width: 260px;
         --speed-dropdown: 195ms;
+
+    /* Link */
+    --clr-link-hover: hsl(217 91% 60%);
 
     /* Icon */
         /* Units */

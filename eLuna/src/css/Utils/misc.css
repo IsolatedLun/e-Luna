@@ -38,9 +38,17 @@
     border-radius: 100vw;
 }
 
+.border-radius-6px {
+    border-radius: 6px;
+}
+
 /* Cursors */
 .cursor-pointer {
     cursor: pointer;
+}
+
+.select-none {
+    user-select: none;
 }
 
 /* Texts */

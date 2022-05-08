@@ -20,6 +20,10 @@
     justify-content: center;
 }
 
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
 /* Grid */
 [class*='grid'] {
     display: grid;
@@ -27,6 +31,11 @@
 
 .grid-auto-columns {
     grid-template-columns: repeat(5, 1fr);
+}
+
+/* Misc */
+.flow > * + * {
+    margin-top: 0.3em;
 }
 
 /* Gaps */

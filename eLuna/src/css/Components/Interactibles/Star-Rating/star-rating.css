@@ -1,0 +1,31 @@
+.star-rating .star:hover,
+.star-rating .star:hover ~ .star,
+.star-rating .star[data-variant='selected'],
+.star-rating .star[data-variant='selected'] ~ .star {
+    font-weight: bold;
+    color: var(--clr-star, gold);
+}
+
+.star-rating .star::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--clr-star, gold);
+
+    width: 0.2rem;
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+    transition: transform 180ms ease-in-out, opacity 200ms ease;
+}
+
+.star-rating .star[data-variant='none']::before {
+    opacity: 0;
+}
+
+.star-rating .star[data-variant='selected']::before {
+    transform: translate(-50%, -0.75rem);
+}

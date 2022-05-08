@@ -1,0 +1,8 @@
+.card[data-variant='item'] {
+    --_card-spacing: 0.75em;
+}
+
+.card-container .card__img-container {
+    width: 9rem;
+    aspect-ratio: 1;
+}

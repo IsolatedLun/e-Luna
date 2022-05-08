@@ -1,10 +1,12 @@
-.card:is([data-variant='product'], [data-contains-single='false']) img {
-    width: var(--card-image-size-small);
-    background-color: var(--clr-hover);
-    border-radius: var(--_img-border, 5px);
+.card:is([data-variant='product']) {
+    --_card-spacing: 0.45em;
 }
 
-.card:is([data-variant='product'], [data-contains-single='true']) img {
+.card:is([data-variant='product'], [data-contains-single='false']) img {
+    width: var(--card-image-size-small);
+}
+
+.card:is([data-contains-single='true']) img {
     width: var(--card-image-size-big);
 }
 
