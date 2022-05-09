@@ -48,7 +48,7 @@ const StarRating = (props: INF_StarRating) => {
       ref={rating}
       onClick={handleClick}
       className="[ star-rating ] [ flex flex-row-reverse flex-center ] 
-        [ fs-300 gap-025 cursor-pointer select-none pos-relative ]">
+        [ fs-300 gap-025 pos-relative ]">
 
         
 
@@ -58,11 +58,17 @@ const StarRating = (props: INF_StarRating) => {
           [1, 2, 3, 4, 5].map((_, idx) => <Star key={idx} idx={idx} />)
         }
 
-        <TooltipContainer>
+        <TooltipContainer class='[ margin-inline-05 ]'>
           <Tooltip>
-            <div className='[ flex-col ] [ gap-1 ]'>
+            <div className='[ flex-col ] [ gap-1 flex-column-reverse ]'>
               
-              <RatingBar raterAmt={23} AllRatersAmt={50} idx={5} />
+              { 
+                [1, 2, 3, 4, 5].map((_, idx) => {
+                  const rateAmt = Number(eval(`props._${idx + 1}_stars`));
+
+                  return <RatingBar raterAmt={rateAmt} AllRatersAmt={3} idx={idx + 1}  />
+                }) 
+              }
               
             </div>
           </Tooltip>

@@ -19,6 +19,14 @@
     margin-inline: auto;
 }
 
+.margin-inline-025 {
+    margin-inline: 0.25em;
+}
+
+.margin-inline-05 {
+    margin-inline: 0.5em;
+}
+
 /* Margins [Logical] */
 .margin-block-1rem {
     margin-block: 1rem;

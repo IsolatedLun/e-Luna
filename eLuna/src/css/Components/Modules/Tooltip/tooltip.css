@@ -1,20 +1,23 @@
-.tooltip-container .tooltip__icon:is(:hover, :focus) + *,
-.tooltip:is(:hover, :focus-within) {
-    visibility: visible;
-}
-
 .tooltip {
-    visibility: hidden;
     max-width: var(--tooltip-max-width);
     max-height: calc(var(--tooltip-max-width) / 2);
 
     overflow-y: auto;
     overflow-x: hidden;
+    transform: translateY(-1rem);
+    transition: transform 95ms ease, opacity 100ms ease-in-out;
 
     top: 90%;
+    opacity: 0;
 }
 
 .card[data-variant='tooltip'] {
     background-color: var(--clr-card-tooltip-background);
     border: 2px solid var(--clr-hover);
+}
+
+/* Tooltip Transition */
+.tooltip-enter-done {
+    opacity: 1;
+    transform: translateY(0rem);
 }
