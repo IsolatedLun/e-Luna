@@ -1,0 +1,24 @@
+.button[data-variant='price'] {
+    --_background: var(--clr-button-price-background);
+}
+
+.price:not([data-discount='0'])::after {
+    content: attr(data-discount)'%';
+    position: absolute;
+    font-size: var(--fs-200);
+
+    inset: -1.25rem 0 auto 0;
+
+    text-align: center;
+    background-color: hsl(134, 63%, 38%);
+}
+
+.price:not([data-discount='0'])::before {
+    content: '$ 'attr(data-price);
+    position: absolute;
+    font-size: var(--fs-450);
+
+    white-space: nowrap;
+
+    left: 5.75rem;
+}

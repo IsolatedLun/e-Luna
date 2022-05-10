@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.flex-align-end {
+    align-items: flex-end;
+}
+
 .flex-justify-between {
     justify-content: space-between;
 }

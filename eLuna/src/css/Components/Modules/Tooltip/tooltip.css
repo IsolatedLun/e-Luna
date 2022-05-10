@@ -8,6 +8,7 @@
     transition: transform 95ms ease, opacity 100ms ease-in-out;
 
     top: 90%;
+    right: 0;
     opacity: 0;
 }
 

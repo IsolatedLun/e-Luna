@@ -1,5 +1,6 @@
 .card[data-variant='item'] {
     --_card-spacing: 0.75em;
+    width: 100%;
 }
 
 .card-container .card__img-container {

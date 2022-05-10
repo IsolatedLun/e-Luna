@@ -51,6 +51,7 @@
 
     /* Buttons */
     --clr-button-background: rgba(0 0 0 / 0.26);
+    --clr-button-price-background: hsl(218 2% 11%);
 
         /* Units */
         --button-spacing: 0.75em;

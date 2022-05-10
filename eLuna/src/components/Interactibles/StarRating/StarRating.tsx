@@ -66,7 +66,7 @@ const StarRating = (props: INF_StarRating) => {
                 [1, 2, 3, 4, 5].map((_, idx) => {
                   const rateAmt = Number(eval(`props._${idx + 1}_stars`));
 
-                  return <RatingBar raterAmt={rateAmt} AllRatersAmt={3} idx={idx + 1}  />
+                  return <RatingBar raterAmt={rateAmt} AllRatersAmt={15} idx={idx + 1}  />
                 }) 
               }
               
