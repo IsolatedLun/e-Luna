@@ -37,6 +37,13 @@
     grid-template-columns: repeat(5, 1fr);
 }
 
+.grid-repeater {
+    --_items: 2;
+
+    grid-template-columns: repeat(var(--_items), 1fr);
+    gap: var(--_gap, 2em);
+}
+
 /* Misc */
 .flow > * + * {
     margin-top: 0.3em;
@@ -57,4 +64,15 @@
 
 .gap-1 {
     gap: 1em;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    *:where([data-flex-collapse]) {
+        flex-direction: column;
+    }
+
+    *:is([data-grid-collapse]) {
+        --_items: 1;
+    }
 }

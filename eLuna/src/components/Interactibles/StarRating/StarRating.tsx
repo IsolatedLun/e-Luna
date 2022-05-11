@@ -1,12 +1,19 @@
 import React, { useEffect } from 'react'
 import Tooltip from '../../Modules/Tooltips/Tooltip';
 import TooltipContainer from '../../Modules/Tooltips/TooltipContainer';
+import { highlightStar, resetStars } from './funcs';
 import RatingBar from './RatingBar';
 import Star from './Star';
 import { INF_StarRating } from './types';
 
 const StarRating = (props: INF_StarRating) => {
   const rating = React.createRef<HTMLDivElement>();
+  const allRatersAmt = 
+    props._1_stars + 
+    props._2_stars + 
+    props._3_stars + 
+    props._4_stars + 
+    props._5_stars;
 
   function handleClick(e: React.MouseEvent<any>) {
     if(props.isViewOnly)
@@ -23,24 +30,9 @@ const StarRating = (props: INF_StarRating) => {
       target.setAttribute('data-variant', 'selected');
   }
 
-  function resetStars(el: HTMLElement) {
-    for(let i = 0; i < el.children.length; i++) {
-      el.children[i].setAttribute('data-variant', 'none');
-    }
-  }
-
-  function highlightStar() {
-    // Math.ceil being used so - 1
-    // The row of the stars are reversed so -5
-    const idx = Math.abs(Math.ceil(props.rating) - 6);
-    const star = rating?.current?.children[idx];
-
-    star?.setAttribute('data-variant', 'selected')
-  }
-
   useEffect(() => {
     if(rating.current)
-      highlightStar();
+      highlightStar(rating.current, props.rating);
   }, [])
 
   return (
@@ -66,7 +58,7 @@ const StarRating = (props: INF_StarRating) => {
                 [1, 2, 3, 4, 5].map((_, idx) => {
                   const rateAmt = Number(eval(`props._${idx + 1}_stars`));
 
-                  return <RatingBar raterAmt={rateAmt} AllRatersAmt={15} idx={idx + 1}  />
+                  return <RatingBar raterAmt={rateAmt} AllRatersAmt={allRatersAmt} idx={idx + 1}  />
                 }) 
               }
               

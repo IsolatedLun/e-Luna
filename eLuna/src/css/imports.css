@@ -7,6 +7,7 @@
 /* Compositions */
 @import url('./Compositions/hoverable.css');
 @import url('./Compositions/typography.css');
+@import url('./Compositions/containers.css');
 
 /* Utilities */
 @import url('./Utils/layouts.css');
@@ -20,6 +21,7 @@
 @import url('./Components/Home/home.css');
 
 @import url('./Components/Views/item-view.css');
+@import url('./Components/Views/ProductView/product-view.css');
 
 @import url('./Components/Interactibles/Buttons/button.css');
 @import url('./Components/Interactibles/Buttons/icon.css');

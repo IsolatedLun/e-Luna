@@ -35,14 +35,20 @@
 }
 
 .border-radius-50pct {
+    --_border-radius: 50%;
+
     border-radius: 50%;
 }
 
 .border-radius-100vw {
+    --_border-radius: 100vw;
+
     border-radius: 100vw;
 }
 
 .border-radius-6px {
+    --_border-radius: 6px;
+
     border-radius: 6px;
 }
 

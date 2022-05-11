@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import StarRating from '../../Interactibles/StarRating/StarRating'
 import Price from '../Price/Price'
 import { INF_ProductView } from './types'
@@ -12,9 +12,9 @@ const ItemCard = (props: INF_ProductView) => {
 
       <div className='[ card ] [ flex-col flex-justify-between ]' data-variant='item'>
             <h2 className='[ fs-300 fw-normal margin-bottom-1-5 ]'>
-                <a href="" className='[ text-ellipsis-2 ]'>
+                <Link to={`/product/${props.id}/${props.name}`} className='[ text-ellipsis-2 ]'>
                     { props.name }
-                </a>
+                </Link>
             </h2>
             
             <div className='[ flex flex-justify-between flex-align-end ]'>

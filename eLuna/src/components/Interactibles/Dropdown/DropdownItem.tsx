@@ -6,6 +6,7 @@ const DropdownItem = (props: INF_DropdownItem) => {
     <a 
       href={props.to ? props.to : '#'} 
       onClick={() => props.toMenu && props.setActive!(props.toMenu)}
+      data-variant='dropdown'
       className='[ dropdown-item hoverable ] [ flex-align-center gap-05 fs-450 ]
         [ border-radius-inherit ]'>
         {

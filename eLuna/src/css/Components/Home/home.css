@@ -1,6 +1,6 @@
 .home .showcase__container {
     --_img-border: 6px;
-    
-    max-height: var(--home-showcase-height);
+
+    --_max-height: var(--home-showcase-height);
     aspect-ratio: 16 / 9;
 }

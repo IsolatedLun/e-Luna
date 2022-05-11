@@ -1,0 +1,6 @@
+.container {
+    width: var(--_width, 100%);
+
+    max-width: var(--_max-width, 100%);
+    max-height: var(--_max-height, 100%);
+}

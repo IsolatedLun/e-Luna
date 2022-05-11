@@ -1,0 +1,11 @@
+.product-view-container {
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.product-view-container .product__img-slider.container {
+    --_width: 90vw;
+    --_max-width: 38rem;
+
+    aspect-ratio: 2 / 1;
+}

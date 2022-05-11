@@ -16,9 +16,14 @@
 .price:not([data-discount='0'])::before {
     content: '$ 'attr(data-price);
     position: absolute;
-    font-size: var(--fs-450);
+    font-size: var(--fs-300);
 
     white-space: nowrap;
 
     left: 5.75rem;
+}
+
+.price:is([data-alignment='bottom'])::before {
+    left: 0;
+    top: 3rem;
 }

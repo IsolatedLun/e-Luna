@@ -6,6 +6,7 @@ export interface INF_ProductCard {
 }
 
 export interface INF_ProductView {
+    id: number;
     name: string;
 
     price: {

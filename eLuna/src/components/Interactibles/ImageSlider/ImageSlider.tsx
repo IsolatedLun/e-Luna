@@ -33,7 +33,8 @@ const ImageSlider = ({ imgUrls, alt } : { imgUrls: string[], alt: string }) => {
 
     useEffect(() => {
         transitionInterval = setInterval(() => {
-            handleClick(1);
+            if(imgUrls.length > 1)
+                handleClick(1);
         }, 5000)
 
         return () => { clearInterval(transitionInterval) };

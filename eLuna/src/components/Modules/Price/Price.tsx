@@ -16,7 +16,8 @@ const Price = (props: INF_Price) => {
         data-discount={props.discount_pct}
         data-price={calculatePrice()}
         data-variant='price'
-        className='[ button price ] [ pos-relative fs-450 ]'>
+        data-alignment={props.alignment ? props.alignment : 'default'}
+        className={`[ button price ] [ pos-relative fs-450 ] ${props?.class}`}>
 
         $&nbsp;
         { props.discount_pct > 0 && (

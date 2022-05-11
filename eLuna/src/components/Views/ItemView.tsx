@@ -7,6 +7,7 @@ const ItemView = () => {
         <ItemCard 
           price={{ actual_price: 9000, discount_pct: 0.5 }} 
           name='Call of duty 2022' 
+          id={0}
           seller={{ id: 1, username: 'lol' }} 
           product_rating={{
             _1_stars: 1,
