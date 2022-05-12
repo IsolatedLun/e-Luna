@@ -20,12 +20,13 @@ function App() {
           <Route path="/product/:id/:name" element={
             <ProductView 
             price={{ actual_price: 9000, discount_pct: 0.5 }} 
-            name='Call of duty 2022' 
+            name='Call of duty 2022'  
             id={0}
             type='Game'
             description=""
             reviews={[]}
             images={['']}
+            tags={[]}
             seller={{ id: 1, username: 'lol' }} 
             product_rating={{
               _1_stars: 1,

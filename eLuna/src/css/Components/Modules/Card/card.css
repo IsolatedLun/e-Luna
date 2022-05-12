@@ -1,6 +1,6 @@
 .card {
     background-color: var(--clr-card-background);
-    padding: var(--_card-spacing, --card-spacing);
+    padding: var(--_card-spacing, 0.5em);
 
     border-radius: var(--_card-border, 6px);
 }

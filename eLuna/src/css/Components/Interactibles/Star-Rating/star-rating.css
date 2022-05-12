@@ -1,5 +1,5 @@
 /* Stars */
-.star-rating .star:hover,
+.star-rating:is([data-view-only='false']) .star:hover,
 .star-rating .star:hover ~ .star,
 .star-rating .star[data-variant='selected'],
 .star-rating .star[data-variant='selected'] ~ .star {

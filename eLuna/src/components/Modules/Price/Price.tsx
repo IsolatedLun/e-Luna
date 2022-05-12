@@ -15,6 +15,7 @@ const Price = (props: INF_Price) => {
     <p 
         data-discount={props.discount_pct}
         data-price={calculatePrice()}
+        aria-label={`This product costs ${calculatePrice()}`}
         data-variant='price'
         data-alignment={props.alignment ? props.alignment : 'default'}
         className={`[ button price ] [ pos-relative fs-450 ] ${props?.class}`}>

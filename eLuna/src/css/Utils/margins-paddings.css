@@ -15,18 +15,6 @@
     margin-right: 0.5rem;
 }
 
-.margin-inline-auto {
-    margin-inline: auto;
-}
-
-.margin-inline-025 {
-    margin-inline: 0.25em;
-}
-
-.margin-inline-05 {
-    margin-inline: 0.5em;
-}
-
 .margin-bottom-05 {
     margin-bottom: 0.5rem;
 }
@@ -43,7 +31,27 @@
     margin-bottom: 1.5rem;
 }
 
+.margin-top-1rem {
+    margin-top: 1rem;
+}
+
 /* Margins [Logical] */
 .margin-block-1rem {
     margin-block: 1rem;
+}
+
+.margin-block-025rem {
+    margin-block: 0.25rem;
+}
+
+.margin-inline-auto {
+    margin-inline: auto;
+}
+
+.margin-inline-025 {
+    margin-inline: 0.25em;
+}
+
+.margin-inline-05 {
+    margin-inline: 0.5em;
 }

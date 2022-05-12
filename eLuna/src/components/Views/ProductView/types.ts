@@ -1,4 +1,5 @@
 import { INF_ProductView } from "../../Modules/Cards/types";
+import { INF_Tag } from "../../Modules/Tags/types";
 
 export interface INF_Product extends INF_ProductView {
     description: string;
@@ -6,4 +7,5 @@ export interface INF_Product extends INF_ProductView {
 
     images: string[];
     reviews: any[];
+    tags: INF_Tag[];
 }

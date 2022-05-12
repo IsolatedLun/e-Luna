@@ -5,6 +5,8 @@
 
     --clr-hover: hsl(0 0% 50% / 0.36);
 
+    --clr-neutral-300: hsl(0 0% 90%);
+
     --clr-muted: hsl(0 0% 76%);
 
         /* Speeds */
@@ -40,6 +42,11 @@
             
             --card-image-size-small: 7rem;
             --card-image-size-big: 9rem;
+
+    /* Tag */
+    --clr-tag-background: hsl(0 0% 16%);
+        /* Units */
+        --tag-spacing: 0.35em;
     
     /* Tooltip */
         /* Units */

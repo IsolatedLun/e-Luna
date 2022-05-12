@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.flex-justify-center {
+    justify-content: center;
+}
+
 .flex-align-end {
     align-items: flex-end;
 }
@@ -22,6 +26,10 @@
 .flex-center {
     align-items: center;
     justify-content: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
 .flex-row-reverse {
