@@ -1,0 +1,19 @@
+.media-scroller {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: var(--_media-scoller-fraction, 23%);
+    overflow-x: auto;
+
+    padding: var(--media-scroller-spacing);
+    gap: var(--_media-scroller-gap, 0.75em);
+
+    overscroll-behavior-inline: contain;
+}
+
+.scroller-snapper-inline {
+    scroll-snap-type: inline mandatory;
+}
+
+.scroller-snapper-inline > * {
+    scroll-snap-align: start;
+}

@@ -1,4 +1,8 @@
+import GridSplit from '../../Modules/Grids/GridSplit'
+import ItemView from '../ItemView'
+import ProductSection from './ProductSection'
 import ProductViewHeader from './ProductViewHeader'
+import ProductAboutSection from './Sections/ProductAboutSection'
 import { INF_Product } from './types'
 
 const ProductView = (props: INF_Product) => {
@@ -7,9 +11,19 @@ const ProductView = (props: INF_Product) => {
     <div className="[ product-view-container ] [ margin-block-1rem ]">
         <ProductViewHeader { ...props } />
 
-        <section role='Product description'>
-            <p className="[ desc ] [ fs-200 ]">ABOUT THIS PRODUCT</p>
-        </section>
+        <GridSplit>
+          <div>
+            <ProductAboutSection product={props} />
+
+            <ProductSection role='Product comments' title='Reviews on this product'>
+
+            </ProductSection>
+          </div>
+
+          <ProductSection role='Related products' title='Related products'>
+            <ItemView />
+          </ProductSection>
+        </GridSplit>
     </div>
   )
 }

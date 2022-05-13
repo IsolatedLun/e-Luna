@@ -23,8 +23,10 @@ const ProductViewHeader = (props: INF_Product) => {
             </div>
 
             <div className='[ ] [ flex-col flex-justify-between width-100pct ]'>
-                <article className='[ product__info ] [ fs-200 margin-block-025rem ]'>
-                    <p>{ props.description.length > 0 ? props.description : 'This product has no description!' }</p>
+                <article className='[ product__info ] [ fs-200 margin-block-025rem height-100pct ]'>
+                    <p>
+                        { props.description.length > 0 ? props.description : 'This product has no description!' }
+                    </p>
                 </article>
                 <div className='[ flex-justify-between gap-05 margin-top-1rem ]'>
                     <Price { ...props.price } />

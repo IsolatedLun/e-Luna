@@ -21,6 +21,7 @@ function App() {
             <ProductView 
             price={{ actual_price: 9000, discount_pct: 0.5 }} 
             name='Call of duty 2022'  
+            type_path="electronics-storage-ssd"
             id={0}
             type='Game'
             description=""

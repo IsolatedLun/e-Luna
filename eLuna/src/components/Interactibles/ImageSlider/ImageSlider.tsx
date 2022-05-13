@@ -41,7 +41,7 @@ const ImageSlider = ({ imgUrls, alt } : { imgUrls: string[], alt: string }) => {
     }, [])
 
     return (
-        <div className='[ image-slider ] [ pos-relative ]'>
+        <div className='[ image-slider ] [ pos-relative overflow-hidden text-center ]'>
             <IconButton 
                 ariaLabel='Left' 
                 class='[ slider__button pos-absolute ]'

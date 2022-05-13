@@ -23,7 +23,7 @@
     margin-bottom: 0.75rem;
 }
 
-.margin-bottom-1 {
+.margin-bottom-1rem {
     margin-bottom: 1rem;
 }
 
@@ -38,6 +38,14 @@
 /* Margins [Logical] */
 .margin-block-1rem {
     margin-block: 1rem;
+}
+
+.margin-block-end-1rem {
+    margin-block-end: 1rem;
+}
+
+.margin-block-end-05rem {
+    margin-block-end: 0.5rem;
 }
 
 .margin-block-025rem {

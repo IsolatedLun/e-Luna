@@ -70,6 +70,14 @@
     text-align: center;
 }
 
+.text-capital {
+    text-transform: capitalize;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
 .white-space-nowrap {
     white-space: nowrap;
 }

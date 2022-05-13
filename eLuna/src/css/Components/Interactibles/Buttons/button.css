@@ -39,6 +39,6 @@
     border-color: var(--clr-hover);
 }
 
-.button[data-variant='interactive']:is(:hover, :focus) {
+.button[data-variant='interactive']:not([data-hover-disable]):is(:hover, :focus) {
     --_background: var(--clr-hover);
 }

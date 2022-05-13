@@ -20,7 +20,7 @@
 
     white-space: nowrap;
 
-    left: 5.75rem;
+    left: 110%;
 }
 
 .price:is([data-alignment='bottom'])::before {

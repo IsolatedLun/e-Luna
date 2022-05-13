@@ -5,7 +5,7 @@ const ItemView = () => {
   return (
     <div className="[ item-view ] [ flex-col ] [ margin-block-1rem gap-05 ]">
         <ItemCard 
-          price={{ actual_price: 9000, discount_pct: 0.5 }} 
+          price={{ actual_price: 245, discount_pct: 60 }} 
           name='Call of duty 2022' 
           id={0}
           seller={{ id: 1, username: 'lol' }} 

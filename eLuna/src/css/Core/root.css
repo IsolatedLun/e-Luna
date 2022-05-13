@@ -4,6 +4,7 @@
     --clr-foreground: white;
 
     --clr-hover: hsl(0 0% 50% / 0.36);
+    --clr-hover-dark: hsl(0 0% 50% / 0.18);
 
     --clr-neutral-300: hsl(0 0% 90%);
 
@@ -32,6 +33,11 @@
     /* Home */
     --home-showcase-height: 24rem;
 
+    /* Product */
+        /* Units */
+        --product-description-height: 34ch;
+        --product-description-spacing: 0.5em;
+
     /* Card */
     --clr-card-background: hsl(218 2% 20%);
     --clr-card-tooltip-background: hsl(218 2% 14%);
@@ -42,6 +48,10 @@
             
             --card-image-size-small: 7rem;
             --card-image-size-big: 9rem;
+
+    /* Media Scroller */
+        /* Units */
+        --media-scroller-spacing: 0.5em;
 
     /* Tag */
     --clr-tag-background: hsl(0 0% 16%);
