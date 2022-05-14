@@ -17,7 +17,7 @@ const ProductViewHeader = (props: INF_Product) => {
             <StarRating { ...props.product_rating } isViewOnly />
         </div>
 
-        <section className='[ ] [ flex-justfiy-between gap-05 ]' data-flex-collapse>
+        <section className='[ ] [ flex-justify-between gap-05 ]' data-flex-collapse>
             <div className="[ product__img-slider ] [ container ]">
                 <ImageSlider imgUrls={props.images} alt={`${props.name}'s images`} />
             </div>
@@ -28,7 +28,7 @@ const ProductViewHeader = (props: INF_Product) => {
                         { props.description.length > 0 ? props.description : 'This product has no description!' }
                     </p>
                 </article>
-                <div className='[ flex-justify-between gap-05 margin-top-1rem ]'>
+                <div className='[ flex-justify-between gap-05 margin-top-1-5rem ]'>
                     <Price { ...props.price } />
                     <Button variant='interactive'>Add to cart</Button>
                 </div>

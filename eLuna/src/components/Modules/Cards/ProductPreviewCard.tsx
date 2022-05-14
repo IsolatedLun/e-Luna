@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Button from '../../Interactibles/Buttons/Button';
 import { INF_ProductCard } from './types'
 
-const ProductCard = (props: INF_ProductCard) => {
+const ProductPreviewCard = (props: INF_ProductCard) => {
   const [images, setImages] = useState<string[]>([]);
 
   useEffect(() => {
@@ -36,4 +36,4 @@ const ProductCard = (props: INF_ProductCard) => {
   )
 }
 
-export default ProductCard
+export default ProductPreviewCard

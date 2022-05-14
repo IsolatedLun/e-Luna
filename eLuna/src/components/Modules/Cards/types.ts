@@ -1,4 +1,5 @@
 import { INF_Rating } from "../../Interactibles/StarRating/types";
+import { INF_SellerPreview } from "../Seller/types";
 
 export interface INF_ProductCard {
     title: string;
@@ -15,8 +16,5 @@ export interface INF_ProductView {
     }
     product_rating: INF_Rating;
 
-    seller: {
-        id: number;
-        username: string;
-    }
+    seller: INF_SellerPreview;
 }

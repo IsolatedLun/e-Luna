@@ -82,3 +82,9 @@ button {
     font-size: var(--fs-420);
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+    *[data-desktop-only] {
+        display: none !important;
+    }
+}

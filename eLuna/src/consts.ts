@@ -1,5 +1,6 @@
 // Icons
 export const PLUS_ICON = '\uf067';
+export const VERIFIED_ICON = `\uf14a`;
 
 export const ARROW_RIGHT = '\uf061';
 export const ARROW_LEFT = '\uf060';

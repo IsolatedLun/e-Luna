@@ -55,6 +55,9 @@
 
     /* Tag */
     --clr-tag-background: hsl(0 0% 16%);
+
+    --clr-tag-link-background: hsl(220 70% 36% / 0.24);
+    --clr-tag-text: hsl(220 92% 69%);
         /* Units */
         --tag-spacing: 0.35em;
     

@@ -28,12 +28,12 @@ function App() {
             reviews={[]}
             images={['']}
             tags={[]}
-            seller={{ id: 1, username: 'lol' }} 
+            seller={{ id: 1, username: 'lol', is_verified: true }} 
             product_rating={{
               _1_stars: 1,
-              _2_stars: 0,
-              _3_stars: 0,
-              _4_stars: 0,
+              _2_stars: 7,
+              _3_stars: 4,
+              _4_stars: 2,
               _5_stars: 14,
               rating: 4
             }}/>

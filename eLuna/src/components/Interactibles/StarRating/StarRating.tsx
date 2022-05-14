@@ -45,7 +45,7 @@ const StarRating = (props: INF_StarRating) => {
 
         
 
-        5 <span className="text-muted">.{ String(props.rating % 1)[2] } /</span>
+        5 <span className="text-muted">.{ (5 - props.rating).toPrecision(1) } /</span>
 
         {
           [1, 2, 3, 4, 5].map((_, idx) => <Star key={idx} idx={idx} />)

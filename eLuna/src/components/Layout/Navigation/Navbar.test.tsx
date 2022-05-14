@@ -2,9 +2,14 @@ import "jest";
 import { screen, render } from '@testing-library/react'
 import Navbar from "./Navbar";
 import { act } from "react-dom/test-utils";
+import { BrowserRouter } from "react-router-dom";
 
 test('Open different menus of dropdowns', () => {
-    render(<Navbar />);
+    render(
+        <BrowserRouter>
+            <Navbar />
+        </BrowserRouter>
+    );
     
     const btn = document.querySelector('button[aria-label="Navigation dropdown"]') as HTMLButtonElement;
 

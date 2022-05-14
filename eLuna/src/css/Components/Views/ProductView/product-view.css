@@ -17,3 +17,7 @@
     padding-block: 0.45em;
     border-bottom: 1px solid var(--clr-hover);
 }
+
+.product-view-container .product__type-paths a:last-of-type {
+    color: var(--clr-tag-text);
+}

@@ -9,3 +9,10 @@
     border-radius: var(--_border-radius, 7px);
     white-space: nowrap;
 }
+
+.tag[data-variant='link'] {
+    --_background: var(--clr-tag-link-background);
+    --_color: var(--clr-tag-text);
+
+    font-size: var(--fs-300);
+}

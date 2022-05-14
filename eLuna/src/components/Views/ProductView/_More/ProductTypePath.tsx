@@ -2,14 +2,14 @@ import React from 'react'
 import { INF_ProductTypePath } from './types'
 
 const ProductTypePath = (props: INF_ProductTypePath) => {
-    const res = getPaths()
+    const res = getPaths();
 
     function getPaths() {
         return props.value.split('-');
     }
   
     return (
-    <div className='[ flex gap-025 ]'>
+    <div className='[ product__type-paths ] [ flex gap-025 ]'>
         { res.map((type, idx) => (
             <>
                 <a className='[ text-muted text-capital ]' href={`/search?type=${type}`}>{ type }</a>

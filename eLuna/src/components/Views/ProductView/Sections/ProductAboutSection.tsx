@@ -5,6 +5,7 @@ import { ProductAboutItemKey,
 import ProductTypePath from '../_More/ProductTypePath'
 import ProductSection from '../ProductSection'
 import { INF_Product } from '../types'
+import Seller from '../../../Modules/Seller/SellerPreview'
 
 const ProductAboutSection = ({ product } : { product: INF_Product }) => {
   return (
@@ -17,7 +18,7 @@ const ProductAboutSection = ({ product } : { product: INF_Product }) => {
 
             <ProductAboutListItem>
                 <ProductAboutItemKey>Seller:</ProductAboutItemKey>
-                <Link to=''>{ product.seller.username }</Link>
+                <Seller { ...product.seller } />
             </ProductAboutListItem>
         </ProductAboutList>
     </ProductSection>
