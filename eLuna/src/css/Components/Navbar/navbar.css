@@ -3,3 +3,7 @@
     padding: calc(var(--nav-spacing) * 0.5) var(--nav-spacing);
     height: var(--nav-height);
 }
+
+.main-nav #navbar-cart-dropdown {
+    --_transform-x: -90%;
+}

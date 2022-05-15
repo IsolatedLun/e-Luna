@@ -14,7 +14,7 @@ const DropdownItem = (props: INF_DropdownItem) => {
             <span className="[ icon ] [ fw-bold ]">{ props.leftIcon }</span>
         }
 
-        <div className='[ flex-col fs-300 ]'>
+        <div className='[ flex-col fs-300 ] [ width-100pct ]'>
         { 
             props.children
         }

@@ -11,6 +11,7 @@ export interface INF_Rating {
 
 export interface INF_StarRating extends INF_Rating {
     isViewOnly: boolean;
+    showControl: boolean;
 }
 
 export interface INF_Star {

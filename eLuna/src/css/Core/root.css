@@ -38,6 +38,12 @@
         --product-description-height: 34ch;
         --product-description-spacing: 0.5em;
 
+    /* Inputs */
+    --clr-input-interact: hsl(217 71% 30%);
+        /* Units */
+        --input-spacing: 0.95em;
+        --input-clear-button-spacing: 0.5em;
+
     /* Card */
     --clr-card-background: hsl(218 2% 20%);
     --clr-card-tooltip-background: hsl(218 2% 14%);
@@ -93,4 +99,12 @@
     /* Icon */
         /* Units */
         --icon-spacing: 0.65em;
+
+    /* Image slider */
+        /* Units */
+        --image-slider-collection-spacing: 0.4em;
+        --image-slider-slide-max-width: 5rem;
+
+    /* Image */
+    --clr-img-container: hsl(218 2% 36%);
 }

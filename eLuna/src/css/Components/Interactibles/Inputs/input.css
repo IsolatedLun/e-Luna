@@ -1,13 +1,27 @@
 .input {
-    padding: 0.35em 1em;
+    --_palette: var(--clr-input-interact);
+
+    padding: calc(var(--input-spacing) * 0.5) var(--input-spacing);
     border: 2px solid var(--clr-hover);
     border-radius: 6px;
 }
 
+.input:is(:hover, :focus) {
+    border-color: var(--_palette);
+    box-shadow: 0 0 0px 2px var(--_palette);
+}
+
 /* Default Input */
 .input-container .input__clear-button {
-    --tag-spacing: 0.4em;
+    --tag-spacing: calc(var(--input-clear-button-spacing) * 0.5) var(--input-clear-button-spacing);
+    
     top: 50%;
-    left: 50%;
-    transform: translate(7rem, -50%);
+    left: 90%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px) {
+    .input-container .input__clear-button {
+        left: 85%;
+    }
 }

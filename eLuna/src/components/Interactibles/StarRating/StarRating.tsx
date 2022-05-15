@@ -51,21 +51,26 @@ const StarRating = (props: INF_StarRating) => {
           [1, 2, 3, 4, 5].map((_, idx) => <Star key={idx} idx={idx} />)
         }
 
-        <TooltipContainer class='[ ]'>
-          <Tooltip>
-            <div className='[ flex-col ] [ gap-1 flex-column-reverse ]'>
-              
-              { 
-                [1, 2, 3, 4, 5].map((_, idx) => {
-                  const rateAmt = Number(eval(`props._${idx + 1}_stars`));
+        {
+          props.showControl &&
+          (
+            <TooltipContainer class='[ ]'>
+              <Tooltip>
+                <div className='[ flex-col ] [ gap-1 flex-column-reverse ]'>
+                  
+                  { 
+                    [1, 2, 3, 4, 5].map((_, idx) => {
+                      const rateAmt = Number(eval(`props._${idx + 1}_stars`));
 
-                  return <RatingBar raterAmt={rateAmt} AllRatersAmt={allRatersAmt} idx={idx + 1}  />
-                }) 
-              }
-              
-            </div>
-          </Tooltip>
-        </TooltipContainer> 
+                      return <RatingBar raterAmt={rateAmt} AllRatersAmt={allRatersAmt} idx={idx + 1}  />
+                    }) 
+                  }
+                  
+                </div>
+              </Tooltip>
+            </TooltipContainer> 
+          )
+        }
         
     </div>
   )

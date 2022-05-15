@@ -1,0 +1,11 @@
+.img-container {
+    --_img-max-width: 100%;
+    --_img-ratio: 16 / 9;
+
+    max-width: var(--_img-max-width);
+    aspect-ratio: var(--_img-ratio);
+
+    border-radius: var(--_border-radius, 4px);
+
+    background-color: var(--clr-img-container);
+}
