@@ -4,7 +4,7 @@ import { INF_Tag } from "../../Modules/Tags/types";
 
 export interface INF_Product extends INF_ProductView {
     description: string;
-    type: string;
+    product_type: string;
 
     images: string[];
     reviews: any[];

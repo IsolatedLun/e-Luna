@@ -2,7 +2,7 @@ import Button from '../../Interactibles/Buttons/Button'
 import ImageSlider from '../../Interactibles/ImageSlider/ImageSlider'
 import StarRating from '../../Interactibles/StarRating/StarRating'
 import Price from '../../Modules/Price/Price'
-import Tags from '../../Modules/Tags/Tags'
+import Tags from '../../Compounds/Tags/Tags'
 import { INF_Product } from './types'
 
 const ProductViewHeader = (props: INF_Product) => {

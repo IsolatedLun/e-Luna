@@ -1,0 +1,13 @@
+.input {
+    padding: 0.35em 1em;
+    border: 2px solid var(--clr-hover);
+    border-radius: 6px;
+}
+
+/* Default Input */
+.input-container .input__clear-button {
+    --tag-spacing: 0.4em;
+    top: 50%;
+    left: 50%;
+    transform: translate(7rem, -50%);
+}

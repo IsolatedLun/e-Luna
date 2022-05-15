@@ -1,7 +1,7 @@
 import React from 'react'
 import { INF_CC } from '../../../types'
-import Tag from './Tag'
-import { INF_Tags } from './types'
+import Tag from '../../Modules/Tags/Tag'
+import { INF_Tags } from '../../Modules/Tags/types'
 
 const Tags = (props: INF_Tags) => {
   return (

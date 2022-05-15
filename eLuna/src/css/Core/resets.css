@@ -73,7 +73,7 @@ textarea {
     font-family: 'Poppins', sans-serif;
 
     color: var(--clr-foreground);
-    background-color: none;
+    background-color: var(--clr-background);
 
     border: none;
 }

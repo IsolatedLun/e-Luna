@@ -17,3 +17,9 @@
 .scroller-snapper-inline > * {
     scroll-snap-align: start;
 }
+
+@media screen and (max-width: 768px) {
+    .media-scroller {
+        grid-auto-columns: 1fr;
+    }
+}

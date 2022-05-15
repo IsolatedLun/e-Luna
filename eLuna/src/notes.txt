@@ -1,0 +1,8 @@
+Modules -> Components that will be used more than once.
+Compounds -> Components that are the the parent/iterator of many { Module components }.
+
+Views -> Components that will the main component of the route.
+
+Interactibles -> Components that the user can change the state or UI with.
+
+Layout -> Components that are always rendered/shown to the user.

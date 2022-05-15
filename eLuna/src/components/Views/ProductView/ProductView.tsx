@@ -1,5 +1,4 @@
 import GridSplit from '../../Modules/Grids/GridSplit'
-import ItemView from '../ItemView'
 import ProductSection from './ProductSection'
 import ProductViewHeader from './ProductViewHeader'
 import ProductAboutSection from './Sections/ProductAboutSection'
@@ -21,7 +20,6 @@ const ProductView = (props: INF_Product) => {
           </div>
 
           <ProductSection role='Related products' title='Related products'>
-            <ItemView />
           </ProductSection>
         </GridSplit>
     </div>

@@ -76,6 +76,8 @@
         /* Units */
         --button-spacing: 0.75em;
 
+        --button-icon-width: 45px;
+
     /* Dropdown */
     --clr-dropdown-background: hsl(218 2% 16%);
     --shadow-dropdown: 0 0 4px 4px rgba(0 0 0 / 0.26);

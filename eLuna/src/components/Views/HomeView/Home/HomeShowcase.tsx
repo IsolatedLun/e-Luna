@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageSlider from '../../Interactibles/ImageSlider/ImageSlider'
+import ImageSlider from '../../../Interactibles/ImageSlider/ImageSlider'
 
 const HomeShowcase = () => {
   return (

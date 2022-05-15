@@ -1,6 +1,5 @@
-import React from 'react'
-import MediaScroller from '../../Interactibles/ItemScroller/MediaScroller'
-import ProductCard from '../../Modules/Cards/ProductPreviewCard'
+import MediaScroller from '../../../Interactibles/ItemScroller/MediaScroller'
+import ProductCard from '../../../Modules/Cards/ProductPreviewCard'
 import HomeShowcase from './HomeShowcase'
 
 const Home = () => {

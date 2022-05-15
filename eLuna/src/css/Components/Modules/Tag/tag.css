@@ -1,13 +1,16 @@
 .tag {
     font-size: var(--fs-200);
-    font-weight: 500;
-    padding: var(--_padding, var(--tag-spacing));
+    padding: var(--_tag-spacing, var(--tag-spacing));
 
     background-color: var(--_background, var(--clr-tag-background));
     color: var(--_color, var(--clr-neutral-300));
 
     border-radius: var(--_border-radius, 7px);
     white-space: nowrap;
+}
+
+.tag:not(.button) {
+    font-weight: bold;
 }
 
 .tag[data-variant='link'] {

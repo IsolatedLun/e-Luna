@@ -6,20 +6,24 @@
         calc(var(--button-spacing) * 0.5) var(--button-spacing)
         );
 
+    font-size: var(--_font-size, var(--fs-420));
+
     background-color: var(--_background, --clr-button-background);
     border: var(--_border-button, 2px solid transparent);
     border-radius: var(--_border-radius, 1px);
 
-    transition: backround-color 105ms ease-in-out;
+    transition: background-color 105ms ease-in-out;
 }
 
 /* Icon */
 .button[data-variant='icon'] {
     --_background: var(--clr-hover);
     --_button-spacing: 0.45em;
-
-    font-size: var(--fs-500);
-    height: auto;
+    --_font-size: var(--fs-420);
+    
+    width: var(--button-icon-width);
+    aspect-ratio: 1 / 1;
+    height: 100%;
     transition: filter var(--speed) ease-in-out;
 }
 

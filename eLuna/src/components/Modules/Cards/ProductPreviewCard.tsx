@@ -28,7 +28,9 @@ const ProductPreviewCard = (props: INF_ProductCard) => {
               ))
             }
         </div>
-        <h2 className='[ card__title ] [ text-ellipsis ] [ text-center margin-top-05rem fs-500  ]'>{ props.title }</h2>
+        <h2 className='[ card__title ] [ text-ellipsis ] [ text-center margin-top-05rem fs-500  ]'>
+          { props.title }
+        </h2>
         <Button class='[ width-100pct margin-top-05rem ]' variant='interactive'>
           Explore
         </Button>

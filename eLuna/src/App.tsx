@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Layout/Home/Home";
+import Home from "./components/Views/HomeView/Home/Home";
 import Navbar from "./components/Layout/Navigation/Navbar";
-import ItemView from "./components/Views/ItemView";
 import ProductView from "./components/Views/ProductView/ProductView";
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
         <Routes>
           <Route path="/" element={<>
             <Home />
-            <ItemView />
           </>} />
 
           <Route path="/product/:id/:name" element={
@@ -23,7 +21,7 @@ function App() {
             name='Call of duty 2022'  
             type_path="electronics-storage-ssd"
             id={0}
-            type='Game'
+            product_type='Game'
             description=""
             reviews={[]}
             images={['']}

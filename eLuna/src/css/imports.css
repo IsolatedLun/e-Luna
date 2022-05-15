@@ -23,6 +23,7 @@
 @import url('./Components/Views/item-view.css');
 @import url('./Components/Views/ProductView/product-view.css');
 
+@import url('./Components/Interactibles/Inputs/input.css');
 @import url('./Components/Interactibles/Buttons/button.css');
 @import url('./Components/Interactibles/Buttons/icon.css');
 @import url('./Components/Interactibles/Dropdown/dropdown.css');
