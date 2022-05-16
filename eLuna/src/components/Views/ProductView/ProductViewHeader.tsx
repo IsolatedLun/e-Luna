@@ -14,7 +14,7 @@ const ProductViewHeader = (props: INF_Product) => {
             <div className="[ tags ] [ flex flex-wrap flex-justify-center ] [ gap-05 ]">
                 <Tags tags={props.tags} />
             </div>
-            <StarRating { ...props.product_rating } isViewOnly showControl={true} />
+            <StarRating { ...props.product_rating } isViewOnly showControl={true} isReview={false} />
         </div>
 
         <section className='[ ] [ flex-justify-between gap-05 ]' data-flex-collapse>

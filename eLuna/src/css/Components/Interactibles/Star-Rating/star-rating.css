@@ -1,6 +1,6 @@
 /* Stars */
 .star-rating:is([data-view-only='false']) .star:hover,
-.star-rating .star:hover ~ .star,
+.star-rating:is([data-view-only='false']) .star:hover ~ .star,
 .star-rating .star[data-variant='selected'],
 .star-rating .star[data-variant='selected'] ~ .star {
     font-weight: bold;
@@ -16,7 +16,7 @@
 
     background-color: var(--clr-star, gold);
 
-    width: 0.2rem;
+    width: var(--star-dot-width, 0.2rem);
     aspect-ratio: 1;
 
     border-radius: 50%;
@@ -28,7 +28,7 @@
 }
 
 .star-rating .star[data-variant='selected']::before {
-    transform: translate(-50%, -0.75rem);
+    transform: translate(-50%, var(--star-dot-y, -0.75rem));
 }
 
 /* Rating bar */

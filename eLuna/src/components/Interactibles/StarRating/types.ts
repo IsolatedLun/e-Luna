@@ -1,16 +1,17 @@
 export interface INF_Rating {
     rating: number;
 
-    _5_stars: number;
-    _4_stars: number;
-    _3_stars: number;
-    _2_stars: number;
-    _1_stars: number;
+    _5_stars?: number;
+    _4_stars?: number;
+    _3_stars?: number;
+    _2_stars?: number;
+    _1_stars?: number;
 }
 
 
 export interface INF_StarRating extends INF_Rating {
     isViewOnly: boolean;
+    isReview: boolean;
     showControl: boolean;
 }
 

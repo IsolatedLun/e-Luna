@@ -4,9 +4,12 @@ import { INF_ImageSliderCollection } from './types'
 
 const ImageSliderCollection = (props: INF_ImageSliderCollection) => {
   return (
-    <div className="[ image-slide-collection ] [ flex-col gap-05 ] [ overflow-y-auto overflow-x-hidden ]">
+    <div 
+      data-desktop-only
+      className="[ image-slide-collection ] [ flex-col gap-05 ] [ overflow-y-auto overflow-x-hidden ]">
         { props.imgUrls.map((imgUrl, idx) => 
                 <Image 
+                    isInteractible={true}
                     idx={idx}
                     key={idx}
                     setIdx={props.setIdx} 

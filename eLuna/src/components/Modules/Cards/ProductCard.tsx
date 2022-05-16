@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import StarRating from '../../Interactibles/StarRating/StarRating'
+import Image from '../Image/Image'
 import Price from '../Price/Price'
 import Seller from '../Seller/SellerPreview'
 import { INF_ProductView } from './types'
@@ -8,7 +9,7 @@ const ItemCard = (props: INF_ProductView) => {
   return (
     <section className='[ card-container ] [ flex ]'>
       <div className='[ card__img-container ] [ border-radius-6px margin-right-05rem width-100pct ]' data-desktop-only>
-        <img src="https://c4.wallpaperflare.com/wallpaper/610/19/620/minecraft-planet-cube-cubes-wallpaper-preview.jpg" alt="" />
+        <Image src={props.images[0]} alt={`${props.name} image`} idx={props.id} isInteractible={false} />
       </div>
 
       <div className='[ card ] [ flex-col flex-justify-between ]' data-variant='item'>
@@ -27,6 +28,8 @@ const ItemCard = (props: INF_ProductView) => {
               <StarRating 
                 { ...props.product_rating }
                 isViewOnly={true}
+                showControl={true}
+                isReview={false}
               />
             </div>
       </div>

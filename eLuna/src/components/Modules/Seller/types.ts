@@ -1,4 +1,4 @@
-export interface INF_SellerPreview {
+export interface INF_SellerUserPreview {
     id: number;
     username: string;
 

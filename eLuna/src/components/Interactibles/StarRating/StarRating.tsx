@@ -1,19 +1,15 @@
 import React, { useEffect } from 'react'
 import Tooltip from '../../Modules/Tooltips/Tooltip';
 import TooltipContainer from '../../Modules/Tooltips/TooltipContainer';
-import { highlightStar, resetStars } from './funcs';
+import { highlightStar, resetStars, sumRaters } from './funcs';
 import RatingBar from './RatingBar';
 import Star from './Star';
 import { INF_StarRating } from './types';
 
 const StarRating = (props: INF_StarRating) => {
   const rating = React.createRef<HTMLDivElement>();
-  const allRatersAmt = 
-    props._1_stars + 
-    props._2_stars + 
-    props._3_stars + 
-    props._4_stars + 
-    props._5_stars;
+  const allRatersAmt = sumRaters(props);
+    
 
   function handleClick(e: React.MouseEvent<any>) {
     if(props.isViewOnly)
@@ -45,7 +41,9 @@ const StarRating = (props: INF_StarRating) => {
 
         
 
-        5 <span className="text-muted">.{ (5 - props.rating).toPrecision(1) } /</span>
+        5 <span className="text-muted">{
+          !props.isReview && `.${ (5 - props.rating).toPrecision(1) }`
+        } /</span>
 
         {
           [1, 2, 3, 4, 5].map((_, idx) => <Star key={idx} idx={idx} />)

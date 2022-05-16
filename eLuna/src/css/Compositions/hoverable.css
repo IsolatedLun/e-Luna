@@ -5,3 +5,7 @@
 .hoverable:is(:hover, :focus) {
     --_background: var(--clr-hover);
 }
+
+.hoverable[data-variant='link']:is(:hover, :focus) {
+    --_background: var(--clr-tag-link-hover);
+}

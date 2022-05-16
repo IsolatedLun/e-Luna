@@ -1,0 +1,5 @@
+.review .img-container {
+    --_img-max-width: var(--size-review-profile);
+    --_img-ratio: 1;
+    --_border-radius: 100vw;
+}

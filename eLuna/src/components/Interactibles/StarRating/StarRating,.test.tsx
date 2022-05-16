@@ -13,6 +13,8 @@ test('Rate an object', () => {
             _2_stars={0}
             _1_stars={0}
             isViewOnly={false}
+            showControl={true}
+            isReview={false}
         />
     );
 
@@ -27,7 +29,7 @@ test('Rate an object', () => {
 
 test('Display a rating bar where 100% of people rated 5 stars', () => {
     render(
-    <RatingBar raterAmt={50} AllRatersAmt={50} idx={5} />
+        <RatingBar raterAmt={50} AllRatersAmt={50} idx={5} />
     );
 
     const text = screen.getByText('100% of people rated this 5 stars.');

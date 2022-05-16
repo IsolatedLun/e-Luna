@@ -1,8 +1,16 @@
 .card {
     background-color: var(--clr-card-background);
-    padding: var(--_card-spacing, 0.5em);
+    padding: var(--_card-spacing, var(--card-spacing));
 
     border-radius: var(--_card-border, 6px);
+}
+
+.card[data-variant='dark'] {
+    background-color: var(--clr-card-dark-background);
+}
+
+.card[data-spacing='spacious'] {
+    --_card-spacing: calc(var(--card-spacing) * 2);
 }
 
 .card img {

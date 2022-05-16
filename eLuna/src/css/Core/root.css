@@ -48,12 +48,18 @@
     --clr-card-background: hsl(218 2% 20%);
     --clr-card-tooltip-background: hsl(218 2% 14%);
 
+    --clr-card-dark-background: hsl(218 2% 13%);
+        /* Units */
+        --card-spacing: 0.5em;
+
         /* Product Card */
             /* Units */
-            --card-spacing: 0.45em;
-            
             --card-image-size-small: 7rem;
             --card-image-size-big: 9rem;
+
+    /* Review */
+        /* Units */
+        --size-review-profile: 3em;
 
     /* Media Scroller */
         /* Units */
@@ -63,6 +69,7 @@
     --clr-tag-background: hsl(0 0% 16%);
 
     --clr-tag-link-background: hsl(220 70% 36% / 0.24);
+    --clr-tag-link-hover: hsl(220 70% 36% / 0.5);
     --clr-tag-text: hsl(220 92% 69%);
         /* Units */
         --tag-spacing: 0.35em;
@@ -95,6 +102,7 @@
 
     /* Link */
     --clr-link-hover: hsl(217 91% 60%);
+    
 
     /* Icon */
         /* Units */

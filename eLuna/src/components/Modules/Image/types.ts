@@ -4,5 +4,7 @@ export interface INF_Image {
 
     idx: string | number;
 
+    isInteractible: boolean;
+
     setIdx?: React.Dispatch<React.SetStateAction<number>>;
 }
