@@ -1,5 +1,6 @@
 import GridSplit from '../../Modules/Grids/GridSplit'
 import Review from '../../Modules/Review/Review'
+import TimeDecrementer from '../../Modules/TimeDecrementer/TimeDecrementer'
 import ProductSection from './ProductSection'
 import ProductViewHeader from './ProductViewHeader'
 import ProductAboutSection from './Sections/ProductAboutSection'

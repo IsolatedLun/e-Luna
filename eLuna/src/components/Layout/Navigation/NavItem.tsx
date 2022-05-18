@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useOuterClick } from '../../../hooks/useOuterClick';
 import IconButton from '../../Interactibles/Buttons/IconButton';
 import { INF_NavItem } from './types';
 
 const NavItem = (props: INF_NavItem) => {
-    const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   return (
     <li className='[ nav-item ]'>

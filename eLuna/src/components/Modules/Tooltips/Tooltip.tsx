@@ -1,4 +1,3 @@
-import React from 'react'
 import { INF_CVC } from '../../../types'
 
 const Tooltip = (props: INF_CVC) => {
