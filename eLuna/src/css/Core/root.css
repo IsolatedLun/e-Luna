@@ -30,6 +30,10 @@
         --nav-height: 3.5rem;
         --nav-spacing: 1em;
 
+    /* Floating Navbar */
+        /* Units */
+        --floating-navbar-margin: 1rem;
+
     /* Home */
     --home-showcase-height: 24rem;
 
@@ -85,6 +89,9 @@
     /* Buttons */
     --clr-button-background: rgba(0 0 0 / 0.26);
     --clr-button-price-background: hsl(218 2% 11%);
+
+    --clr-button-danger: hsl(4 76% 52% / 0.26);
+    --clr-button-danger-border: hsl(4 76% 52%);
 
         /* Units */
         --button-spacing: 0.75em;

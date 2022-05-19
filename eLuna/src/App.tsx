@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Views/HomeView/Home/Home";
 import Navbar from "./components/Layout/Navigation/Navbar";
 import ProductView from "./components/Views/ProductView/ProductView";
+import CartView from "./components/Views/CartView/CartView";
+import SellerView from "./components/Views/SellerView/SellerView";
 
 function App() {
 
@@ -13,6 +15,14 @@ function App() {
         <Routes>
           <Route path="/" element={<>
             <Home />
+          </>} />
+
+          <Route path="/cart" element={<>
+            <CartView />
+          </>} />
+
+          <Route path="/seller" element={<>
+            <SellerView />
           </>} />
 
           <Route path="/product/:id/:name" element={

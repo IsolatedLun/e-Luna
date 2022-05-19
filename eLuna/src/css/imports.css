@@ -22,6 +22,8 @@
 
 @import url('./Components/Views/item-view.css');
 @import url('./Components/Views/ProductView/product-view.css');
+@import url('./Components/Views/Cart-View/cart-view.css');
+@import url('./Components/Views/Seller-View/seller-view.css');
 
 @import url('./Components/Interactibles/Inputs/input.css');
 @import url('./Components/Interactibles/Buttons/button.css');
@@ -29,6 +31,8 @@
 @import url('./Components/Interactibles/Dropdown/dropdown.css');
 @import url('./Components/Interactibles/ImageSlider/image-slider.css');
 @import url('./Components/Interactibles/Star-Rating/star-rating.css');
+@import url('./Components/Interactibles/Float-Navbar/float-navbar.css');
+
 
 @import url('./Components/Modules/Card/card.css');
 @import url('./Components/Modules/Card/product-card.css');

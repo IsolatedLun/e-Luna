@@ -7,7 +7,7 @@ import { INF_SellerUserPreview } from './types'
 const Seller = (props: INF_SellerUserPreview) => {
   return (
     <Link 
-      className='[ tag ] [ hoverable ]' 
+      className='[ seller-preview ] [ tag ] [ hoverable ]' 
       data-variant='link'
       to={`/seller/${props.id}/${props.username}`}
     >

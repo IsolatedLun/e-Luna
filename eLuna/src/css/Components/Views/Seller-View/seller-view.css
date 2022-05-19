@@ -1,0 +1,4 @@
+.seller .seller__header .img-container {
+    --_img-max-width: 7rem;
+    --_img-ratio: 1;
+}

@@ -1,0 +1,33 @@
+.floating-navbar {
+    top: 2%;
+
+    width: max-content;
+    height: max-content;
+
+    border: 2px solid var(--clr-hover);
+}
+
+/* Margin */
+.floating-navbar-margin {
+    margin-left: var(--floating-navbar-margin);
+}
+
+.floating-navbar .navbar__list-item a {
+    padding: 0.25em 0.6em;
+    border-radius: 6px;
+}
+
+.floating-navbar .navbar__list-item a:is(:hover, :focus) {
+    background-color: var(--clr-hover);
+}
+
+@media screen and (max-width: 768px) {
+    .floating-navbar-margin {
+        margin-left: 0;
+    }
+
+    .floating-navbar {
+        position: relative;
+        width: 100%;
+    }
+}

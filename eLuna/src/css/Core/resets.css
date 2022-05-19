@@ -40,7 +40,7 @@ a {
     transition: color 50ms ease;
 }
 
-a:not([data-variant]):is(:hover, :focus) {
+a:not([data-variant]):where(:hover, :focus) {
     color: var(--clr-link-hover);
 }
 

@@ -9,6 +9,8 @@ const IconButton = (props: INF_IconButton) => {
       aria-label={props.ariaLabel}
       className={`[ button icon fw-bold ] ${props.class}`}
       data-variant='icon'
+      data-secondary-variant={props.variant}
+      data-scheme={props.scheme ? props.scheme : 'default'}
     >
       { props.children }
     </button>

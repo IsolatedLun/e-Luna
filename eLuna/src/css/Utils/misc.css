@@ -11,6 +11,10 @@
     position: fixed;
 }
 
+.pos-sticky {
+    position: sticky;
+}
+
 /* Overflows */
 .overflow-hidden {
     overflow: hidden;

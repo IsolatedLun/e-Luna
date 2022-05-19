@@ -36,13 +36,29 @@
 }
 
 /* Interactive */
-.button[data-variant='interactive'] {
+.button:where(
+    [data-variant='interactive'],
+    [data-secondary-variant='interactive']
+) {
     --_background: var(--clr-button-background);
     --_border-radius: 6px;
 
     border-color: var(--clr-hover);
 }
 
-.button[data-variant='interactive']:not([data-hover-disable]):is(:hover, :focus) {
+.button:where(
+    [data-variant='interactive'],
+    [data-secondary-variant='interactive']
+):is(:hover, :focus) {
     --_background: var(--clr-hover);
+}
+
+/* Color schemes */
+.button[data-scheme='danger'] {
+    --_background: var(--clr-button-danger);
+    border-color: var(--clr-button-danger-border);
+}
+
+.button[data-scheme='danger']:is(:hover, :focus) {
+    --_background: var(--clr-button-danger-border);
 }

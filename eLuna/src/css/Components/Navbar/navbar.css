@@ -7,3 +7,7 @@
 .main-nav #navbar-cart-dropdown {
     --_transform-x: -90%;
 }
+
+.main-nav .navbar__cart-button {
+    bottom: 3%;
+}
