@@ -33,6 +33,7 @@
     /* Floating Navbar */
         /* Units */
         --floating-navbar-margin: 1rem;
+        --navbar-list-item-spacing: 0.65em;
 
     /* Home */
     --home-showcase-height: 24rem;

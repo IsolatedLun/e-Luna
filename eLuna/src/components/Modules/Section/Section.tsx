@@ -1,9 +1,12 @@
 import React from 'react'
-import { INF_ProductSection } from './types'
+import { INF_Section } from './types'
 
-const ProductSection = (props: INF_ProductSection) => {
+const Section = (props: INF_Section) => {
   return (
-    <section className='[ product__section ] [ margin-block-1rem ]' role={props.role}>
+    <section 
+        className={`[ ${props.name}__section ] [ section ] [ margin-block-1rem ]`} 
+        role={props.role}
+        >
         <h2 className='[ section__title ] [ fs-300 fw-normal text-upper margin-block-end-05rem ]'>
             { props.title }
         </h2>
@@ -13,4 +16,4 @@ const ProductSection = (props: INF_ProductSection) => {
   )
 }
 
-export default ProductSection
+export default Section

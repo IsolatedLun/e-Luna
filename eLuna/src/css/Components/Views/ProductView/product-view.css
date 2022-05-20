@@ -13,7 +13,7 @@
     border: 2px solid var(--clr-hover);
 }
 
-.product-view-container .section__title {
+.section .section__title {
     padding-block: 0.45em;
     border-bottom: 1px solid var(--clr-hover);
 }

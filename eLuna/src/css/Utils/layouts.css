@@ -40,6 +40,10 @@
     flex-direction: row-reverse;
 }
 
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
 /* Grid */
 [class*='grid'] {
     display: grid;

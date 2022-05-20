@@ -13,7 +13,7 @@
 }
 
 .floating-navbar .navbar__list-item a {
-    padding: 0.25em 0.6em;
+    padding: calc(var(--navbar-list-item-spacing) * 0.5) var(--navbar-list-item-spacing);
     border-radius: 6px;
 }
 

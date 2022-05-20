@@ -2,3 +2,7 @@
     --_img-max-width: 7rem;
     --_img-ratio: 1;
 }
+
+.seller .seller__header {
+    place-items: center;
+}

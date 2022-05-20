@@ -13,7 +13,8 @@
     font-weight: bold;
 }
 
-.tag[data-variant='link'] {
+.tag[data-variant='link'],
+.card[data-variant='tag'] {
     --_background: var(--clr-tag-link-background);
     --_color: var(--clr-tag-text);
 

@@ -1,5 +1,5 @@
 .card {
-    background-color: var(--clr-card-background);
+    background-color: var(--_background, var(--clr-card-background));
     padding: var(--_card-spacing, var(--card-spacing));
 
     border-radius: var(--_card-border, 6px);
@@ -11,6 +11,10 @@
 
 .card[data-spacing='spacious'] {
     --_card-spacing: calc(var(--card-spacing) * 2);
+}
+
+.card[data-spacing='halfspacious'] {
+    --_card-spacing: calc(var(--card-spacing) * 1.5);
 }
 
 .card img {
