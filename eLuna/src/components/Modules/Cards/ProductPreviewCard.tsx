@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Button from '../../Interactibles/Buttons/Button';
+import Image from '../Image/Image';
 import { INF_ProductCard } from './types'
 
 const ProductPreviewCard = (props: INF_ProductCard) => {
@@ -20,11 +21,8 @@ const ProductPreviewCard = (props: INF_ProductCard) => {
 
         <div className="[ card__img-grid ] [ gap-025 ]">
             {
-              images.map(img => (
-                <img 
-                  className='[ card__img ]'
-                  src={img}
-                  alt={`${props.title} product`} />
+              images.map((img, idx) => (
+                <Image alt={`${props.title} product`} src={img} idx={idx} isInteractible={false} />
               ))
             }
         </div>

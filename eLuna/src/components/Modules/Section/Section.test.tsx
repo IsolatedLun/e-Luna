@@ -10,7 +10,7 @@ test('Display a section with a "product details" role', () => {
         </Section>
     )
 
-    const section = screen.getByText('More') as HTMLElement;
+    const section = document.querySelector('[role="product details"]') as HTMLElement;
     
     expect(section.getAttribute('role')).toBe('product details');
 })

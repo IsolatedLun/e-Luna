@@ -20,6 +20,8 @@
 
 @media screen and (max-width: 768px) {
     .media-scroller {
-        grid-auto-columns: 1fr;
+        --_media-scoller-fraction: 1fr;
+
+        grid-auto-flow: row;
     }
 }

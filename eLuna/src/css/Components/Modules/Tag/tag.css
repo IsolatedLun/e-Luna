@@ -20,3 +20,13 @@
 
     font-size: var(--fs-300);
 }
+
+.tag[data-variant='danger'] {
+    --_background: var(--clr-button-danger);
+    --_color: var(--clr-tag-danger-text);
+}
+
+.tag[data-variant='safe'] {
+    --_background: var(--clr-tag-safe);
+    --_color: var(--clr-tag-safe-text);
+}

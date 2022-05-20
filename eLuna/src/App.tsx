@@ -21,7 +21,7 @@ function App() {
             <CartView />
           </>} />
 
-          <Route path="/seller" element={<>
+          <Route path="/seller/*" element={<>
             <SellerView />
           </>} />
 

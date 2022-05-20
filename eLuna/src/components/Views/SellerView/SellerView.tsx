@@ -1,9 +1,12 @@
-import React from 'react'
-import { FloatNavbar, FloatNavbarItem, FloatNavbarList } from '../../Interactibles/FloatingNavbar/FloatNavbar'
-import Image from '../../Modules/Image/Image'
-import Section from '../../Modules/Section/Section'
+import { Route, Routes } from 'react-router-dom'
+import { 
+    FloatNavbar, 
+    FloatNavbarItem, 
+    FloatNavbarList } from '../../Interactibles/FloatingNavbar/FloatNavbar'
+
+import SellerHomeView from './Sections/SellerHomeView'
+import SellerTransactionView from './Sections/SellerTransactionView'
 import SellerViewHeader from './SellerViewHeader'
-import StatCard from './_More/StatCard'
 
 const SellerView = () => {
   return (
@@ -17,16 +20,17 @@ const SellerView = () => {
                         <FloatNavbarItem to=''>
                             Home
                         </FloatNavbarItem>
-                        <FloatNavbarItem to=''>
+                        <FloatNavbarItem to='transactions'>
                             Transactions
                         </FloatNavbarItem>
                     </FloatNavbarList>
                 </FloatNavbar>
 
                 <div className='[ floating-navbar-margin ] [ width-100pct ]'>
-                    <Section title='About' name='seller' role='Seller about section'>
-
-                    </Section>
+                    <Routes>
+                        <Route path='' element={<SellerHomeView />} />
+                        <Route path='transactions' element={<SellerTransactionView />} />
+                    </Routes>
                 </div>
             </div>
         </section>
