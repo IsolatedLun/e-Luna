@@ -7,8 +7,8 @@ const SellerHomeView = () => {
     <>
         <Section title='About' name='seller' role='Seller about section'>
             <AboutText name='Joined at' value='Today' />
-            <AboutText name='Telephone' value='+961 70688459' />      
-            <AboutText name='Email' value='herojoe210@gmail.com' />
+            <AboutText name='Telephone' value='+961 0000000' />      
+            <AboutText name='Email' value='lol@gmail.com' />
             <AboutText name='Location' value='Here' />                  
         </Section>
 
