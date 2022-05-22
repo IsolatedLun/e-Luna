@@ -1,12 +1,9 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom';
-import { TIMES_ICON } from '../../../consts';
+import { useNavigate } from 'react-router-dom';
 import { removeFromCart } from '../../../features/Product-Slice/product-slice';
 import { useAppDispatch, useAppSelector } from '../../../rootHooks'
 import Button from '../../Interactibles/Buttons/Button';
-import IconButton from '../../Interactibles/Buttons/IconButton';
-import ItemCard from '../../Modules/Cards/ProductCard';
-import CartItem from '../../Modules/Cart/CartItem';
+import CartViewItem from '../../Modules/Cart/CartViewItem';
+import FlexItems from '../../Modules/Flex/FlexItems';
 import { INF_Product } from '../ProductView/types';
 
 const CartView = () => {
@@ -26,22 +23,13 @@ const CartView = () => {
 
     return (
         <section className='[ cart-view ] [ margin-block-1rem ]'>
-            <div className="[ cart__view-items ] [ flex-col gap-05 ]">
+            <FlexItems direction='y' blockCls='cart__items'>
                 {
                     Object.values(items).map(item => (
-                        <div className='[ flex-justify-between ] [ gap-05 ]'>
-                                <ItemCard { ...item } />
-                                <IconButton 
-                                    onClick={() => removeItem(item)}
-                                    scheme='danger'
-                                    ariaLabel={`Remove ${item.name} from cart`} 
-                                    variant='interactive'>
-                                    { TIMES_ICON }
-                                </IconButton>
-                        </div>
+                        <CartViewItem item={item} removeItem={removeItem} />
                     ))
                 }
-            </div>
+            </FlexItems>
 
             {
                 Object.values(items).length === 0 && (

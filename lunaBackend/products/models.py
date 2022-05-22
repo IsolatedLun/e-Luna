@@ -1,10 +1,12 @@
 from django.db import models
 
-from lunaBackend.users.models import cUser
+from users.models import cUser
 
 class Product(models.Model):
     name = models.CharField(max_length=256)
     description = models.TextField()
+
+    thumbnail = models.ImageField(upload_to='products/thumbnails/', default='products/def.png')
 
     actual_price = models.PositiveIntegerField()
     discount_pct = models.PositiveIntegerField()
@@ -18,4 +20,7 @@ class Product(models.Model):
         self.actual_price = self.actual_price - (self.actual_price / (self.discount_pct / 100))
         
         self.save()
-    
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='products/', default='products/def.png')

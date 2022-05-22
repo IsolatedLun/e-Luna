@@ -9,7 +9,7 @@ const ItemCard = (props: INF_ProductView) => {
   return (
     <section className='[ card-container ] [ flex ] [ width-100pct ]'>
       <div className='[ card__img-container ] [ border-radius-6px margin-right-05rem width-100pct ]' data-desktop-only>
-        <Image src={props.images[0]} alt={`${props.name} image`} idx={props.id} isInteractible={false} />
+        <Image src={props.thumbnail} alt={`${props.name} image`} idx={props.id} isInteractible={false} />
       </div>
 
       <div className='[ card ] [ flex-col flex-justify-between ]' data-variant='item'>

@@ -22,6 +22,8 @@ class cUserManager(BaseUserManager):
 class cUser(AbstractUser):
     username = models.CharField(max_length=72, unique=True, default='')
     email_address = models.EmailField(max_length=128, unique=True)
+    location = models.CharField(max_length=64)
+
     password = models.CharField(max_length=128)
 
     profile = models.ImageField(upload_to='profiles/', default='profiles/def.png')

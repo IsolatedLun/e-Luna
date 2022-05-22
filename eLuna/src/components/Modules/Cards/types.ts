@@ -14,7 +14,7 @@ export interface INF_ProductCard {
 export interface INF_ProductView {
     id: number;
     name: string;
-    images: string[];
+    thumbnail: string;
 
     price: {
         actual_price: number;

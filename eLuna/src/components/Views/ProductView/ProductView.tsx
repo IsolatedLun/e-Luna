@@ -1,3 +1,4 @@
+import FlexItems from '../../Modules/Flex/FlexItems'
 import GridSplit from '../../Modules/Grids/GridSplit'
 import Review from '../../Modules/Review/Review'
 import Section from '../../Modules/Section/Section'
@@ -24,7 +25,9 @@ const ProductView = (props: INF_Product) => {
           </div>
 
           <Section name='product' role='Related products' title='Related products'>
+            <FlexItems direction='y' blockCls='product__related'>
 
+            </FlexItems>
           </Section>
         </GridSplit>
     </div>
