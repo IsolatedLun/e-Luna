@@ -16,11 +16,10 @@ export interface INF_ProductView {
     name: string;
     thumbnail: string;
 
-    price: {
-        actual_price: number;
-        discount_pct: number;
-    }
-    product_rating: INF_Rating;
+    actual_price: number;
+    discount_pct: number;
+
+    rating: INF_Rating;
 
     seller: INF_SellerUserPreview;
 }

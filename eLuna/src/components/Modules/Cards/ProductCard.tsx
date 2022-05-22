@@ -5,10 +5,10 @@ import Price from '../Price/Price'
 import Seller from '../Seller/SellerPreview'
 import { INF_ProductView } from './types'
 
-const ItemCard = (props: INF_ProductView) => {
+const ProductCard = (props: INF_ProductView) => {
   return (
-    <section className='[ card-container ] [ flex ] [ width-100pct ]'>
-      <div className='[ card__img-container ] [ border-radius-6px margin-right-05rem width-100pct ]' data-desktop-only>
+    <section className='[ product-card card-container ] [ flex gap-05 ] [ width-100pct ]'>
+      <div data-desktop-only>
         <Image src={props.thumbnail} alt={`${props.name} image`} idx={props.id} isInteractible={false} />
       </div>
 
@@ -21,12 +21,12 @@ const ItemCard = (props: INF_ProductView) => {
             
             <div className='[ flex flex-justify-between flex-align-end ]'>
               <div className='[ flex-col flex-center gap-05 ]'>
-                <Price { ...props.price } />
+                <Price actual_price={props.actual_price} discount_pct={props.discount_pct} />
                 <span className='[ text-muted ]'>Seller: <Seller { ...props.seller } /></span>
               </div>
 
               <StarRating 
-                { ...props.product_rating }
+                { ...props.rating }
                 isViewOnly={true}
                 showControl={true}
                 isReview={false}
@@ -37,4 +37,4 @@ const ItemCard = (props: INF_ProductView) => {
   )
 }
 
-export default ItemCard
+export default ProductCard

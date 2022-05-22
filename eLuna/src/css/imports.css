@@ -24,6 +24,7 @@
 @import url('./Components/Views/ProductView/product-view.css');
 @import url('./Components/Views/Cart-View/cart-view.css');
 @import url('./Components/Views/Seller-View/seller-view.css');
+@import url('./Components/Views/Search-View/search-view.css');
 
 @import url('./Components/Interactibles/Inputs/input.css');
 @import url('./Components/Interactibles/Buttons/button.css');

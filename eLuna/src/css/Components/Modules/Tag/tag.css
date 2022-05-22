@@ -1,5 +1,5 @@
 .tag {
-    font-size: var(--fs-200);
+    font-size: var(--_font-size, var(--fs-200));
     padding: var(--_tag-spacing, var(--tag-spacing));
 
     background-color: var(--_background, var(--clr-tag-background));
@@ -17,8 +17,6 @@
 .card[data-variant='tag'] {
     --_background: var(--clr-tag-link-background);
     --_color: var(--clr-tag-text);
-
-    font-size: var(--fs-300);
 }
 
 .tag[data-variant='danger'] {

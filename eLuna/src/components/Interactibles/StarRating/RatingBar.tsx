@@ -4,7 +4,12 @@ import { INF_RatingBar } from './types'
 const RatingBar = (props: INF_RatingBar) => {
     const style = {'--_scale-pct': calculateRatersPct()} as CSSProperties;
 
+    console.log(props)
+
     function calculateRatersPct() {
+        if(props.raterAmt === 0 || props.AllRatersAmt === 0)
+            return 0;
+
         return props.raterAmt / props.AllRatersAmt;
     }
 

@@ -3,7 +3,9 @@
     width: 100%;
 }
 
-.card-container .card__img-container {
-    width: 9rem;
-    aspect-ratio: 1;
+.card-container .img-container {
+    --_img-max-width: 9rem;
+    --_img-ratio: 1;
+
+    height: 100%;
 }

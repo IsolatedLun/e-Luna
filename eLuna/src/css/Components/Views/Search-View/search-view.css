@@ -1,0 +1,11 @@
+.search-view {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.search-view .search__controls {
+    max-height: calc(85vh);
+    max-width: 100%;
+
+    overflow-x: hidden;
+}

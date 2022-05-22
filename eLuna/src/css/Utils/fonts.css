@@ -1,28 +1,42 @@
 /* Font Sizes */
 .fs-100 {
+    --_font-size: var(--fs-100);
+
     font-size: var(--fs-100);
 }
 
 .fs-200 {
+    --_font-size: var(--fs-200);
+
     font-size: var(--fs-200);
 }
 
 .fs-300 {
+    --_font-size: var(--fs-300);
+
     font-size: var(--fs-300);
 }
 
 .fs-450 {
+    --_font-size: var(--fs-450);
+
     font-size: var(--fs-450);
 }
 
 .fs-500 {
+    --_font-size: var(--fs-500);
+
     font-size: var(--fs-500);
 }
 .fs-600 {
+    --_font-size: var(--fs-600);
+
     font-size: var(--fs-600);
 }
 
 .fs-700 {
+    --_font-size: var(--fs-700);
+
     font-size: var(--fs-700);
 }
 

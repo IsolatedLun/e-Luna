@@ -90,5 +90,7 @@
 
     *:is([data-grid-collapse]) {
         --_items: 1;
+
+        grid-template-columns: 1fr;
     }
 }
