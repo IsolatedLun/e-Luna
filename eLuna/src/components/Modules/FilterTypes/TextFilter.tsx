@@ -6,6 +6,7 @@ const TextFilter = (props: INF_FilterType) => {
     <a 
       onClick={() => 
         props.setter!(props)}
+      className='[ text-muted ]'
       href='#'>{ props.name }</a>
   )
 }

@@ -13,7 +13,11 @@ const Navbar = () => {
     <nav className='[ main-nav ] [ flex-align-center flex-justify-between ] [ gap-05 ]' role='Primary navigation'>
         <h1 className='[ fs-700 ]'><Link to={'/'}>e-Luna</Link></h1>
 
-        <Input setter={setSearch} val={search} />
+        <Input 
+          onInput={(e) => setSearch(e.currentTarget.value)} 
+          onClearInput={() => setSearch('')}
+          val={search} 
+          placeholder='Search...' />
 
         <ul className="[ nav-list ] [ flex gap-05 ]">
           <NavbarDropdown />

@@ -60,6 +60,10 @@
     gap: var(--_gap, 2em);
 }
 
+.grid-varied {
+    grid-template-columns: var(--_items-varied);
+}
+
 /* Misc */
 .flow > * + * {
     margin-top: 0.3em;
@@ -89,8 +93,7 @@
     }
 
     *:is([data-grid-collapse]) {
-        --_items: 1;
-
-        grid-template-columns: 1fr;
+        --_items: 1 !important;
+        --_items-varied: 1fr !important;
     }
 }

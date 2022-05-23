@@ -1,5 +1,8 @@
 import React from 'react'
 import FilterTags from '../../../Compounds/Tags/FilterTags'
+import Button from '../../../Interactibles/Buttons/Button'
+import FilterSet from '../../../Modules/FilterTypes/FilterSet'
+import MinMaxFilter from '../../../Modules/FilterTypes/MinMaxFilter'
 import TextFilter from '../../../Modules/FilterTypes/TextFilter'
 import FilterTag from '../../../Modules/Tags/FilterTag'
 import { INF_FilterTag } from '../../../Modules/Tags/types'
@@ -14,10 +17,18 @@ const SearchControls = (props: INF_SearchControls) => {
         })
     }
     
-    function addFilter(toAdd: INF_FilterTag) {
+    function addFilter(toAdd: INF_FilterTag, replace?: boolean) {
         props.setFilters(state => {
             if(!state.some(item => item.filter === toAdd.filter))
                 return [...state, toAdd];
+                
+            else if(replace) {
+                const idx = state.findIndex(x => x.filter === toAdd.filter);
+                state[idx] = toAdd;
+
+                return [...state];
+            }
+
             return state;
         })
     }
@@ -33,7 +44,15 @@ const SearchControls = (props: INF_SearchControls) => {
             <FilterTags filters={props.filters} setter={removeFilter} />
         </div>
 
-        <TextFilter name='0$ - 25$' filter='__gte=25' setter={addFilter} />
+        <FilterSet title='Prices'>
+            <TextFilter name='0$ - 25$' filter='__gte=25' setter={addFilter} value='' />
+            <TextFilter name='25$ - 50$' filter='__gte=50' setter={addFilter} value='' />
+            <TextFilter name='50$ - 100$' filter='__gte=100' setter={addFilter} value='' />
+
+            <MinMaxFilter setter={addFilter} />
+        </FilterSet>
+
+        <Button variant='interactive'>Search</Button>
     </div>
   )
 }
