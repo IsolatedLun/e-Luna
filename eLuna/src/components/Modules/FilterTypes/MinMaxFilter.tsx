@@ -4,7 +4,7 @@ import FlexItems from '../Flex/FlexItems'
 import { INF_MultiFilterType } from './types'
 
 const MinMaxFilter = (props: INF_MultiFilterType) => {
-    const [min, setMin] = useState(0);
+    const [min, setMin] = useState(1000000);
     const [max, setMax] = useState(0);
 
     useEffect(() => {
@@ -17,9 +17,9 @@ const MinMaxFilter = (props: INF_MultiFilterType) => {
 
     function addMinMaxFilter(type: string) {
         props.setter!({
-            filter: type,
+            filter: `actual_price${type}`,
             name: type === '__gte' ? `Greater than ${max}` : `Less than ${min}`,
-            value: type === '__gte' ? `__gte=${max}` : `__lte=${min}`
+            value: type === '__gte' ? max : min
         }, true)
     }
 

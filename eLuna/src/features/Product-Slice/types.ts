@@ -5,6 +5,8 @@ export interface INF_ProductState {
         items: I_INF_Product;
         total: number;
     }
+
+    products: INF_Product[];
 }
 
 export interface INF_AddToCartPayload {

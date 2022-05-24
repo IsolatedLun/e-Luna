@@ -1,11 +1,11 @@
-import React from 'react'
 import FilterTags from '../../../Compounds/Tags/FilterTags'
 import Button from '../../../Interactibles/Buttons/Button'
 import FilterSet from '../../../Modules/FilterTypes/FilterSet'
 import MinMaxFilter from '../../../Modules/FilterTypes/MinMaxFilter'
 import TextFilter from '../../../Modules/FilterTypes/TextFilter'
-import FilterTag from '../../../Modules/Tags/FilterTag'
+import TextInputFilter from '../../../Modules/FilterTypes/TextInputFilter'
 import { INF_FilterTag } from '../../../Modules/Tags/types'
+import { objectifyFilters } from './funcs'
 import { INF_SearchControls } from './types'
 
 const SearchControls = (props: INF_SearchControls) => {
@@ -17,7 +17,18 @@ const SearchControls = (props: INF_SearchControls) => {
         })
     }
     
+    /**
+     * @param newFilter
+     * @param replace - Replaces filter instead of creating a new filter with the same type. 
+    */
     function addFilter(toAdd: INF_FilterTag, replace?: boolean) {
+        // Automatically remove empty texts. 
+        if(typeof(toAdd.value) === 'string' && toAdd.value.length === 0) {
+            removeFilter(toAdd);
+            return;
+        }
+            
+
         props.setFilters(state => {
             if(!state.some(item => item.filter === toAdd.filter))
                 return [...state, toAdd];
@@ -45,14 +56,34 @@ const SearchControls = (props: INF_SearchControls) => {
         </div>
 
         <FilterSet title='Prices'>
-            <TextFilter name='0$ - 25$' filter='__gte=25' setter={addFilter} value='' />
-            <TextFilter name='25$ - 50$' filter='__gte=50' setter={addFilter} value='' />
-            <TextFilter name='50$ - 100$' filter='__gte=100' setter={addFilter} value='' />
+            <TextFilter name='0$ - 25$' filter='actual_price__gte' setter={addFilter} value='25' />
+            <TextFilter name='25$ - 50$' filter='actual_price__gte' setter={addFilter} value='50' />
+            <TextFilter name='50$ - 100$' filter='actual_price__gte' setter={addFilter} value='100' />
 
             <MinMaxFilter setter={addFilter} />
         </FilterSet>
 
-        <Button variant='interactive'>Search</Button>
+        <FilterSet title='Misc'>
+            <TextInputFilter 
+                placeholder='Enter title' 
+                filter='name__icontains' 
+                setter={addFilter} 
+                keyName={'Title'}
+                />
+            <TextInputFilter 
+                placeholder='Enter seller' 
+                filter='seller__username__icontains' 
+                setter={addFilter} 
+                keyName={'Seller'}
+                />
+        </FilterSet>
+
+        <Button 
+            variant='interactive'
+            onClick={() => props.fetchProducts(objectifyFilters(props.filters))}
+            >
+            Search
+        </Button>
     </div>
   )
 }
