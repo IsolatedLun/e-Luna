@@ -76,6 +76,13 @@ const SearchControls = (props: INF_SearchControls) => {
                 setter={addFilter} 
                 keyName={'Seller'}
                 />
+
+            <TextInputFilter 
+                placeholder='Enter type' 
+                filter='type__icontains' 
+                setter={addFilter} 
+                keyName={'Type'}
+                />
         </FilterSet>
 
         <Button 

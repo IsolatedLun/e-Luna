@@ -4,7 +4,7 @@ from . import models
 class cUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.cUser
-        fields = '__all__'
+        fields = ['username', 'is_verified', 'id', 'is_superuser', 'profile', 'location']
 
 class SellerUserPreviewSerializer(serializers.ModelSerializer):
     class Meta:

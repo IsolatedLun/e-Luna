@@ -6,8 +6,7 @@ const HomeShowcase = () => {
     <div className="[ home__showcase ] [ margin-block-1rem ]">
         <div className="[ showcase__container ] [ container ]">
             <ImageSlider 
-                imgUrls={['https://icdn.digitaltrends.com/image/digitaltrends/macbook-pro-2021-01.jpg',
-              'https://www.techniknews.net/wp-content/uploads/2020/11/nvidia-geforce-rtx-3000-serie.jpg']}
+                imgUrls={[]}
                 alt='Product'
                 showSlides
                 productName=''

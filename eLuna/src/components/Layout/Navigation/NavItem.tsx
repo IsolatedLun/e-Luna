@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useOuterClick } from '../../../hooks/useOuterClick';
 import IconButton from '../../Interactibles/Buttons/IconButton';
 import { INF_NavItem } from './types';
 

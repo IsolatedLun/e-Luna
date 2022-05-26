@@ -5,7 +5,7 @@ import { API_URL } from '../consts'
 export const productApi = createApi({
   reducerPath: 'productApi',
   baseQuery: fetchBaseQuery({
-      baseUrl: API_URL + 'products/',
+      baseUrl: API_URL + '/products/',
       prepareHeaders: (headers, { getState }) => {
           return headers
       }
@@ -18,15 +18,23 @@ export const productApi = createApi({
         })
     }),
 
+    getProduct: builder.query<INF_Product, any>({
+        query: ({ id, name } : { id: string, name: string }) => ({
+            url: `product/${id}/${name}`,
+            method: 'GET'
+        })
+    }),
+
     getFilteredProducts: builder.mutation<INF_Product[], any>({
       query: (filterSet) => ({
           url: 'filtered',
           method: 'POST',
           body: filterSet
       })
-  })
+    })
   }),
 })
 
 
-export const { useGetProductsQuery, useGetFilteredProductsMutation } = productApi;
+export const { useGetProductsQuery, useGetFilteredProductsMutation,
+    useGetProductQuery } = productApi;

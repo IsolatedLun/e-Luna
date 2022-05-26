@@ -21,7 +21,7 @@
     --_button-spacing: 0.45em;
     --_font-size: var(--fs-420);
     
-    width: var(--button-icon-width);
+    width: var(--_icon-width, auto);
     aspect-ratio: 1 / 1;
     height: 100%;
     transition: filter var(--speed) ease-in-out;

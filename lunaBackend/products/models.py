@@ -10,14 +10,16 @@ class Product(models.Model):
 
     actual_price = models.PositiveIntegerField()
     discount_pct = models.PositiveIntegerField()
+    original_price = models.PositiveIntegerField()
 
     product_type = models.CharField(max_length=64)
     type_path = models.CharField(max_length=128) 
+    type = models.CharField(max_length=128)
 
     seller = models.ForeignKey(cUser, on_delete=models.CASCADE)
 
     def update_price(self):
-        self.actual_price = self.actual_price - (self.actual_price / (self.discount_pct / 100))
+        self.actual_price = self.original_price - (self.original_price / (self.discount_pct / 100))
         
         self.save()
 

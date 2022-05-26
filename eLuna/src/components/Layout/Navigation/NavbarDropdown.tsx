@@ -3,7 +3,7 @@ import Dropdown from '../../Interactibles/Dropdown/Dropdown'
 import DropdownItem from '../../Interactibles/Dropdown/DropdownItem'
 import NavItem from './NavItem'
 import { CSSTransition } from 'react-transition-group'
-import { ARROW_LEFT, ARROW_RIGHT, GEAR_ICON, PLUS_ICON } from '../../../consts'
+import { ARROW_LEFT, ARROW_RIGHT, GEAR_ICON, PLUS_ICON, SEARCH_ICON } from '../../../consts'
 
 const NavbarDropdown = () => {
     const [active, setActive] = useState('main');
@@ -22,6 +22,12 @@ const NavbarDropdown = () => {
                             <p className="[ dropdown__text]">My Dashboard</p>
                             <p className="[ dropdown__small-text ] [ text-muted fs-200 ]">Open your dashboard.</p>
                         </DropdownItem>
+
+                        <DropdownItem leftIcon={SEARCH_ICON} to='/search'>
+                            <p className="[ dropdown__text]">Search</p>
+                            <p className="[ dropdown__small-text ] [ text-muted fs-200 ]">Start searching!</p>
+                        </DropdownItem>
+
                         <DropdownItem 
                             toMenu='secondary'
                             setActive={setActive}

@@ -17,7 +17,10 @@ const ProductMainDetails = (props: INF_Product) => {
             </p>
         </article>
         <div className='[ flex-justify-between gap-05 margin-top-1-5rem ]'>
-            <Price { ...props.price } />
+            <Price 
+                original_price={props.original_price}
+                actual_price={props.actual_price} 
+                discount_pct={props.discount_pct} />
             {
                 !items[props.id] 
                 ?
@@ -31,7 +34,7 @@ const ProductMainDetails = (props: INF_Product) => {
                 <Button
                 onClick={() => 
                     dispatch(
-                        removeFromCart({ id: props.id, price: props.price.actual_price })
+                        removeFromCart({ id: props.id, price: props.actual_price })
                     )} 
                 variant='interactive'>Remove from cart</Button>
             }

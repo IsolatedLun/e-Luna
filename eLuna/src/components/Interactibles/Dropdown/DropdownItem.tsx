@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { INF_DropdownItem } from './types'
 
 const DropdownItem = (props: INF_DropdownItem) => {
   return (
-    <a 
-      href={props.to ? props.to : '#'} 
+    <Link 
+      to={props.to ? props.to : '#'} 
       onClick={() => props.toMenu && props.setActive!(props.toMenu)}
       data-variant='dropdown'
       className='[ dropdown-item hoverable ] [ flex-align-center gap-05 fs-450 ]
@@ -24,7 +25,7 @@ const DropdownItem = (props: INF_DropdownItem) => {
           props.rightIcon && 
             <span className="[ icon ] [ margin-left-auto fw-bold ]">{ props.rightIcon }</span>
         }
-    </a>
+    </Link>
   )
 }
 

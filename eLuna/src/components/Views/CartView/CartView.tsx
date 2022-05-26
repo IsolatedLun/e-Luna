@@ -16,7 +16,7 @@ const CartView = () => {
         dispatch(
             removeFromCart({
                 id: item.id,
-                price: item.price.actual_price
+                price: item.actual_price
             })
         )
     }

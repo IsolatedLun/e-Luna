@@ -14,13 +14,13 @@ const ProductViewHeader = (props: INF_Product) => {
             <div className="[ tags ] [ flex flex-wrap flex-justify-center ] [ gap-05 ]">
                 <Tags tags={props.tags} />
             </div>
-            <StarRating { ...props.product_rating } isViewOnly showControl={true} isReview={false} />
+            <StarRating { ...props.rating } isViewOnly showControl={true} isReview={false} />
         </div>
 
         <section className='[ ] [ flex-justify-between gap-05 ]' data-flex-collapse>
             <div className="[ product__img-slider ] [ container ]">
                 <ImageSlider 
-                    imgUrls={props.images} alt={`${props.name}'s images`} 
+                    imgUrls={[...props.images, props.thumbnail]} alt={`${props.name}'s images`} 
                     showSlides 
                     productName={props.name} />
             </div>

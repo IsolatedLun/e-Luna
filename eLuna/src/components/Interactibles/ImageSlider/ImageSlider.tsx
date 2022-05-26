@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { CARET_LEFT, CARET_RIGHT } from '../../../consts';
+import { API_URL, CARET_LEFT, CARET_RIGHT } from '../../../consts';
 import Image from '../../Modules/Image/Image';
 import IconButton from '../Buttons/IconButton';
 import ImageSliderCollection from './ImageSliderCollection';
@@ -59,7 +59,7 @@ const ImageSlider = (props: INF_ImageSlider) => {
                     ref={imgRef} 
                     data-testid='slider-img' 
                     className='[ image-slider__img ]' 
-                    src={props.imgUrls[idx]} 
+                    src={API_URL + props.imgUrls[idx]} 
                     data-animation-mode='fade'
                     alt={props.alt} />
 

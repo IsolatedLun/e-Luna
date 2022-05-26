@@ -11,6 +11,12 @@ export interface INF_ProductCard {
     images: string[];
 }
 
+export interface INF_ProductPreviewCard {
+    title: string;
+    to: string;
+    images: string[];
+}
+
 export interface INF_ProductView {
     id: number;
     name: string;
@@ -18,6 +24,7 @@ export interface INF_ProductView {
 
     actual_price: number;
     discount_pct: number;
+    original_price: number;
 
     rating: INF_Rating;
 

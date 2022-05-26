@@ -20,7 +20,6 @@
 @import url('./Components/Navbar/navbar.css');
 @import url('./Components/Home/home.css');
 
-@import url('./Components/Views/item-view.css');
 @import url('./Components/Views/ProductView/product-view.css');
 @import url('./Components/Views/Cart-View/cart-view.css');
 @import url('./Components/Views/Seller-View/seller-view.css');

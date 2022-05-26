@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import Button from '../../Interactibles/Buttons/Button';
+import { useEffect, useState } from 'react'
+import LinkButton from '../../Interactibles/Buttons/LinkButton';
 import Image from '../Image/Image';
-import { INF_ProductCard } from './types'
+import { INF_ProductPreviewCard } from './types'
 
-const ProductPreviewCard = (props: INF_ProductCard) => {
+const ProductPreviewCard = (props: INF_ProductPreviewCard) => {
   const [images, setImages] = useState<string[]>([]);
 
   useEffect(() => {
@@ -22,16 +22,21 @@ const ProductPreviewCard = (props: INF_ProductCard) => {
         <div className="[ card__img-grid ] [ gap-025 ]">
             {
               images.map((img, idx) => (
-                <Image alt={`${props.title} product`} src={img} idx={idx} isInteractible={false} />
+                <img alt={`${props.title} product`} src={img} />
               ))
             }
         </div>
         <h2 className='[ card__title ] [ text-ellipsis ] [ text-center margin-top-05rem fs-500  ]'>
           { props.title }
         </h2>
-        <Button class='[ width-100pct margin-top-05rem ]' variant='interactive'>
+        <LinkButton 
+          ariaLabel='Explore' 
+          to={props.to} 
+          class='[ width-100pct margin-top-05rem text-center ]' 
+          variant='interactive'
+          >
           Explore
-        </Button>
+        </LinkButton>
     </div>
   )
 }

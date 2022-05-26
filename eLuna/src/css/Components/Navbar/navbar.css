@@ -8,6 +8,14 @@
     --_transform-x: -90%;
 }
 
+.main-nav #navbar-cart-dropdown .img-container {
+    --_img-max-width: 8rem;
+}
+
 .main-nav .navbar__cart-button {
     bottom: 3%;
+}
+
+.main-nav .button.icon {
+    --_icon-width: 40px;
 }
