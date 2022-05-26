@@ -1,0 +1,11 @@
+{
+    "data": [
+        {
+            "title": "Gaming",
+            "to": "/search?type=Gaming",
+            "images": ["public/homeShowcase/gaming_1.jpg"]
+        }
+    ],
+
+    "rootUrl": "homeShowcase/"
+}
