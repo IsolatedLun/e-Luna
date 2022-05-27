@@ -50,4 +50,5 @@ class ProductPreviewSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Product
-        fields = ['id', 'name', 'thumbnail', 'actual_price', 'discount_pct', 'rating', 'seller']
+        fields = ['id', 'name', 'thumbnail', 'actual_price', 'discount_pct', 
+        'original_price', 'rating', 'seller']

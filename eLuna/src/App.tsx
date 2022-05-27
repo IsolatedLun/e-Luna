@@ -5,6 +5,7 @@ import ProductView from "./components/Views/ProductView/ProductView";
 import CartView from "./components/Views/CartView/CartView";
 import SellerView from "./components/Views/SellerView/SellerView";
 import SearchView from "./components/Views/SearchView/SearchView";
+import PageNotFound from "./components/Layout/PageNotFound/PageNotFound";
 
 function App() {
 
@@ -18,6 +19,10 @@ function App() {
             <Home />
           </>} />
 
+          <Route path="/product/:id/:name" element={<>
+            <ProductView />
+          </>} />
+
           <Route path="/cart" element={<>
             <CartView />
           </>} />
@@ -26,12 +31,12 @@ function App() {
             <SearchView />
           </>} />
 
-          <Route path="/seller/*" element={<>
+          <Route path="/seller/:id/:name/*" element={<>
             <SellerView />
           </>} />
 
-          <Route path="/product/:id/:name" element={
-            <ProductView />
+          <Route path="*" element={
+            <PageNotFound />
           } />
         </Routes>
 

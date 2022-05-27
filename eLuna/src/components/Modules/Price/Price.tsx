@@ -2,6 +2,7 @@ import React from 'react'
 import { INF_Price } from './types'
 
 const Price = (props: INF_Price) => {
+  console.log(props)
 
   return (
     <p 

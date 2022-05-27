@@ -13,6 +13,11 @@ const TextInputFilter = (props: INF_TextInputFilter) => {
         }, true)
     }, [text])
 
+    useEffect(() => {
+        if(props.value)
+            setText(props.value);
+    }, [])
+
     return (
         <Input placeholder={props.placeholder} val={text} 
             onInput={(e) => {

@@ -84,6 +84,11 @@
     --clr-tag-safe-text: hsl(123 80% 52%);
         /* Units */
         --tag-spacing: 0.35em;
+
+    /* Smooth Bar */
+        /* Units */
+        --smooth-bar-height: 0.096em;
+        --smooth-bar-duration: 2.5s;
     
     /* Tooltip */
         /* Units */

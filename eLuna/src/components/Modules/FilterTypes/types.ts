@@ -24,4 +24,5 @@ export interface INF_FilterSet extends INF_Children {
 export interface INF_TextInputFilter extends INF_FilterInputType {
     keyName: string;
     placeholder: string;
+    value?: string | any;
 }

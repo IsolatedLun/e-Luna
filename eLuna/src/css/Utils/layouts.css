@@ -64,6 +64,17 @@
     grid-template-columns: var(--_items-varied);
 }
 
+.grid-center {
+    place-items: center;
+}
+
+.absolute-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* Misc */
 .flow > * + * {
     margin-top: 0.3em;

@@ -1,3 +1,4 @@
+import { useSearchParams } from 'react-router-dom'
 import FilterTags from '../../../Compounds/Tags/FilterTags'
 import Button from '../../../Interactibles/Buttons/Button'
 import FilterSet from '../../../Modules/FilterTypes/FilterSet'
@@ -9,6 +10,7 @@ import { objectifyFilters } from './funcs'
 import { INF_SearchControls } from './types'
 
 const SearchControls = (props: INF_SearchControls) => {
+    const [params, setParams] = useSearchParams();
 
     function removeFilter(toRemove: INF_FilterTag) {
         props.setFilters(state => {
@@ -68,11 +70,13 @@ const SearchControls = (props: INF_SearchControls) => {
                 placeholder='Enter title' 
                 filter='name__icontains' 
                 setter={addFilter} 
+                value={params.get('name')}
                 keyName={'Title'}
                 />
             <TextInputFilter 
                 placeholder='Enter seller' 
                 filter='seller__username__icontains' 
+                value={params.get('seller')}
                 setter={addFilter} 
                 keyName={'Seller'}
                 />
@@ -80,6 +84,7 @@ const SearchControls = (props: INF_SearchControls) => {
             <TextInputFilter 
                 placeholder='Enter type' 
                 filter='type__icontains' 
+                value={params.get('type')}
                 setter={addFilter} 
                 keyName={'Type'}
                 />

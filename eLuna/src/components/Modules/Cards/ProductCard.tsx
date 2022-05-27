@@ -21,7 +21,11 @@ const ProductCard = (props: INF_ProductView) => {
             
             <div className='[ flex flex-justify-between flex-align-end ]'>
               <div className='[ flex-col flex-center gap-05 ]'>
-                <Price actual_price={props.actual_price} discount_pct={props.discount_pct} />
+                <Price 
+                  actual_price={props.actual_price} 
+                  original_price={props.original_price} 
+                  discount_pct={props.discount_pct} />
+                  
                 <span className='[ text-muted ]'>Seller: <Seller { ...props.seller } /></span>
               </div>
 

@@ -19,6 +19,7 @@
 
 @import url('./Components/Navbar/navbar.css');
 @import url('./Components/Home/home.css');
+@import url('./Components/Layouts/PageNotFound/page-not-found.css');
 
 @import url('./Components/Views/ProductView/product-view.css');
 @import url('./Components/Views/Cart-View/cart-view.css');
@@ -43,3 +44,4 @@
 @import url('./Components/Modules/Image/image.css');
 @import url('./Components/Modules/Review/review.css');
 @import url('./Components/Modules/Media-Scoller/media-scroller.css');
+@import url('./Components/Modules/SmoothBar/smooth-bar.css');
