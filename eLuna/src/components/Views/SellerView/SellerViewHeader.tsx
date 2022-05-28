@@ -1,13 +1,19 @@
 import React from 'react'
 import Image from '../../Modules/Image/Image'
+import { INF_Seller } from './types'
 import StatCard from './_More/StatCard'
 
-const SellerViewHeader = () => {
+const SellerViewHeader = (props: INF_Seller) => {
   return (
     <header className='[ seller__header ] [ flex-justify-between gap-05 ]' data-flex-collapse>
         <div className='[ flex-grow-1 flex-align-center gap-05 ]' data-flex-collapse>
-            <Image src='' alt='' isInteractible={false} idx={0} />
-            <h2>Joe bideen</h2>
+            <Image 
+              src={props.profile} 
+              alt={`${props.username}'s profile`} 
+              isInteractible={false} 
+              idx={0} 
+              />
+            <h2>{ props.username }</h2>
         </div>
 
         <div className='[ flex-align-start flex-wrap gap-05 ]'>

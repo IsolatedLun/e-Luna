@@ -1,15 +1,16 @@
 import React from 'react'
 import Section from '../../../Modules/Section/Section'
+import { INF_Seller } from '../types'
 import AboutText from '../_More/AboutText'
 
-const SellerHomeView = () => {
+const SellerHomeView = (props: INF_Seller) => {
   return (
     <>
         <Section title='About' name='seller' role='Seller about section'>
-            <AboutText name='Joined at' value='Today' />
-            <AboutText name='Telephone' value='+961 0000000' />      
-            <AboutText name='Email' value='lol@gmail.com' />
-            <AboutText name='Location' value='Here' />                  
+            <AboutText name='Joined at' value={props.joined_at} />
+            <AboutText name='Telephone' value={props.telephone} />      
+            <AboutText name='Email' value={props.business_email_address} />
+            <AboutText name='Location' value={props.location} />                  
         </Section>
 
         <Section title='Statistics' name='seller' role='Seller statistics section'>

@@ -14,6 +14,7 @@ const Input = (props: INF_Input<any>) => {
           value={props.val}
           placeholder={props.placeholder}
           type={props.type ? props.type : 'text'}
+          { ...{ "data-desktop-only": true } }
           onInput={props.onInput} />
 
         {

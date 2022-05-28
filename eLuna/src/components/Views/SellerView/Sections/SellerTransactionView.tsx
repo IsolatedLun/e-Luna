@@ -2,19 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import FlexItems from '../../../Modules/Flex/FlexItems'
 import Section from '../../../Modules/Section/Section'
+import Transaction from '../../../Modules/Transaction/Transaction'
+import { INF_Transaction } from '../../../Modules/Transaction/types'
 
-const SellerTransactionView = () => {
+const SellerTransactionView = ({ transactions } : { transactions: INF_Transaction[] }) => {
   return (
     <Section name='seller' role='Seller transactions section' title='Transactions'>
         <FlexItems direction='y' blockCls='transactions'>
-          <div className="[ transaction ] [ card ] [ flex-justify-between ]" data-variant='dark'>
-              <Link to=''>lol</Link>
-              <p className="[ tag ] [ text-upper ]" data-variant='danger'>Sold</p>
-          </div>
-          <div className="[ transaction ] [ card ] [ flex-justify-between ]" data-variant='dark'>
-              <Link to=''>loler</Link>
-              <p className="[ tag ] [ text-upper ]" data-variant='safe'>Bought</p>
-          </div>
+          {
+            transactions.map(transaction => <Transaction { ...transaction } />)
+          }
         </FlexItems>
     </Section>
   )

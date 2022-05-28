@@ -3,6 +3,9 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useGetProductQuery } from '../../../services/productService'
 import FlexItems from '../../Modules/Flex/FlexItems'
 import GridSplit from '../../Modules/Grids/GridSplit'
+import Loader from '../../Modules/Loader/Loader'
+import ViewLoader from '../../Modules/Loader/ViewLoader'
+import Review from '../../Modules/Review/Review'
 import Section from '../../Modules/Section/Section'
 import SmoothBar from '../../Modules/SmoothBar/SmoothBar'
 import ProductViewHeader from './ProductViewHeader'
@@ -28,13 +31,15 @@ const ProductView = () => {
               <ProductAboutSection product={product} />
 
               <Section name='product' role='Product comments' title='Reviews on this product'>
-
+                <Review description='I love this' rating={4.1} 
+                    user={{id: 0, is_verified: true, profile: '/media/products/thumbnails/2022-03-30-image-4-j_1100.png', username: 'CheeseBurger'}} 
+                    />
               </Section>
             </div>
 
             <Section name='product' role='Related products' title='Related products'>
               <FlexItems direction='y' blockCls='product__related'>
-
+            
               </FlexItems>
             </Section>
           </GridSplit>
@@ -42,7 +47,7 @@ const ProductView = () => {
   )
 
   else
-      return <></>
+      return <ViewLoader headerName='Product' text={name!} />
 }
 
 export default ProductView

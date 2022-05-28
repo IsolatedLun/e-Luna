@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useGetFilteredProductsMutation } from '../../../services/productService'
 import Section from '../../Modules/Section/Section'
 import { INF_FilterTag } from '../../Modules/Tags/types'

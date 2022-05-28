@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import FilterTags from '../../../Compounds/Tags/FilterTags'
 import Button from '../../../Interactibles/Buttons/Button'
